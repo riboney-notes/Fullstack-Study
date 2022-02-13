@@ -33,5 +33,50 @@
 
 **NOTE**: `<>` are placeholders; do not include them in the git commnads you execute
 
-## Working on new code
+### Create a new branch
+```md
+## Create and switch to new branch
+git checkout -b <branchname>
+
+## Add changes particular
+git add <add-your-files> 
+
+## Add all changes
+git add .
+
+## commit your code with a message
+git commit -m "<enter your message here>"
+
+## Pushing your branch for the first time
+git push -u origin <branchname> 
+
+## Pushing your code in the future
+git push
+```
+
+### Merging Changes
+```md
+## Retrieve updated branch information
+git fetch
+
+## Review differences (replace main with branch name)
+git diff <branch> origin/ <branch>
+
+## Merge changes to local repository
+## NOTE: Should discuss whether to use rebase or merge
+git merge
+```
+
+## Sync branch with main (hard-reset, lose local changes)
+```md
+## Retrieve updated branch information
+git fetch
+
+## Drop all differences and sync with main
+git reset --hard origin/main
+
+## remove all untracked files & folders
+git clean -f -d
+```
+
 
