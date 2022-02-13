@@ -1,8 +1,28 @@
 # NodeJS Ecosystem
 
-*This document gives an overview of the design patterns, tools, libraries, and common practices for developing backends with NodeJs
+*This document gives an overview of the design patterns, tools, libraries, and common practices for developing backends with NodeJs*
 
-## Overview
+## NodeJs Overview
+*commands are to be run in a terminal*
+
+- Check if already installed:
+  - `node -v`
+  - `npm -v`
+- Install node 
+  - [installer](https://nodejs.org/en/)
+  - [potentially better way](https://github.com/nvm-sh/nvm)
+
+### NPM
+*packages refer to node modules; basically software libaries
+- consists three components
+   - [npmjs](https://www.npmjs.com/) - frontend for registry (find packages here), among other things
+   - CLI tool - tool for developers to interact with npm
+   - the registry - large public database of javascript software
+- Main use of npm: *package management* & *project configuration* 
+
+### NPM vs Yarn
+
+## Express Overview
 
 ![Express API Architecture](https://www.coreycleary.me/_next/static/media/Express-REST-API-Struc.aa7ecaa0c41dbb7344c70665a5f5e259.png)
 ![Express API Architecture 2](https://www.section.io/engineering-education/express/express.png)
@@ -43,3 +63,7 @@
    </details> 
     
 </details>
+
+## Misc
+
+https://www.coreycleary.me/project-structure-for-an-express-rest-api-when-there-is-no-standard-way
