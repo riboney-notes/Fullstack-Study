@@ -108,3 +108,145 @@ const objectOfAttrs = {
    - <img src="https://vuejs.org/assets/directive.69c37117.png" alt="directive syntax graph"/>![image](https://user-images.githubusercontent.com/14286113/154809388-c6f361b8-d7a9-4bb3-aa13-541c3ab0c088.png)
 
 ## Reactivity
+
+```js
+import { reactive } from 'vue'
+
+export default {
+  // `setup` is a special hook dedicated for composition API.
+  setup() {
+    const state = reactive({ count: 0 })
+
+    function increment() {
+      state.count++
+    }
+    
+    // expose the state to the template
+    return {
+      state,
+      increment
+    }
+  }
+}
+
+<div>{{ state.count }}</div>
+<button @click="increment">
+  {{ state.count }}
+</button>
+```
+
+- Can use `<script setup>` instead of `setup()` to expose state and methods
+   - can be done in SFCs 
+   - top-level imports and variables declared in `<script setup>` are usable in the template of the same component
+```js
+<script setup>
+import { reactive } from 'vue'
+
+const state = reactive({ count: 0 })
+
+function increment() {
+  state.count++
+}
+</script>
+
+<template>
+  <button @click="increment">
+    {{ state.count }}
+  </button>
+</template>
+```
+
+- DOM updates happen with every "tick" in the update cylce
+   - use `nextTick(cb)` to wait for DOM update to complete after a state change and execute some method and/or access the updated DOM
+
+- Reactive() has some limitations
+   - only works for object types; can't hold primitive types
+   - Must keep same reference to reactive object and can't easily replace it
+
+- can use `ref()` to create reactive refs that hold any value type
+   - it takes an argument and returns it wrapped within a ref object, and can be accessed with that ref's object's `value` property
+   - refs are automatically unwrapped in the HTML so no need to use the `.value` to `{{}` to get access to the ref value
+      - Only applies to top-level properties, not refs that are nested inside some object  
+
+## Computed proeprties
+
+- in-template expressions are meant for simple operations
+- to reduce clutter in the HTML and for complex logic, use computed properties
+
+```js
+// not using computed property
+const author = reactive({
+  name: 'John Doe',
+  books: [
+    'Vue 2 - Advanced Guide',
+    'Vue 3 - Basic Guide',
+    'Vue 4 - The Mystery'
+  ]
+})
+<p>Has published books:</p>
+<span>{{ author.books.length > 0 ? 'Yes' : 'No' }}</span>
+
+// using computed properties
+<script setup>
+import { reactive, computed } from 'vue'
+
+const author = reactive({
+  name: 'John Doe',
+  books: [
+    'Vue 2 - Advanced Guide',
+    'Vue 3 - Basic Guide',
+    'Vue 4 - The Mystery'
+  ]
+})
+
+// a computed ref
+const publishedBooksMessage = computed(() => {
+  return author.books.length > 0 ? 'Yes' : 'No'
+})
+</script>
+
+<template>
+  <p>Has published books:</p>
+  <span>{{ publishedBooksMessage }}</span>
+</template>
+```
+
+- `computed()` takes a function and returns a computed ref, which is like a normal ref in that you access the value by `.value`
+   - computed refs are auto-unwrapped in HTML like refs
+- computed property automatically racks its reactive dependencies and updates bindings when state changes
+
+- Computed properties vs using methods
+   - Main difference is that computed properties are cached based on their reactive dependencies
+      - meaning that it will only re-evaluate when some of its reactive dependencies have changed
+      - if not changed, then cached results are returned without running function again
+   - Methods on the other hand, always *execute* when a re-render happens
+- So, use computed properties to handle heavy computations that you wouldn't want to constantly execute unless its dependencies state changes
+- Computed properties only *get* values, not change them (By default)
+   - assinging new value to a computed property will cause warning
+   - provide a setter to computed properties to be able to change values of the reactive dependencies
+    ![image](https://user-images.githubusercontent.com/14286113/154812008-43000529-a9c0-4a4b-8839-9ebd8493c2e1.png)
+
+- Try to keep getters in computed property, side-effect free
+   - don't make async requests or mutate the DOM inside of the computed getter
+   - computed property getter should mainly be retrieving a value based on other reactive values   
+   - leave the side effects for vue watchers
+- Avoid mutating the computed value
+   - the returned value from a computed property is like a snapshot of all the reactive dependencies involved
+   - everytime dependencies change, the snapshot changes
+   - therefore, it should be treated as read-only and never mutated since that goes against the intent of computed properties
+- To trigger new computations, update its reactive dependencies  
+
+## Class and style bindings
+
+- v-bind for class and styles is different than for binding with other attributes
+- Objects can be passed to `:class` to toggle class
+   - Ex: `<div :class="{ active: isActive }"></div>`; class will be set to `active` if `isActive` is true
+   - multiple objects can be passed to `:class` (just add more fields to the object you pass in)
+      - declare this object elsewhere and refer to it in the template (it doesn't have to be declared in-line)  
+      - can also use a computed-property:
+      ![image](https://user-images.githubusercontent.com/14286113/154812858-cb15ded2-b040-4b62-84be-50ba819ca64d.png)
+
+- Can pass array to apply a list of classes to `:class`
+   - Using ternary expression: `<div :class="[isActive ? activeClass : '', errorClass]"></div>`
+- you can use the normal HTML class attribute in conjunction with `:class`
+- Attributes like `class` can be inherited from multiple root elements
