@@ -107,6 +107,48 @@ const objectOfAttrs = {
    - avoid use of capital letters in attributes
    - <img src="https://vuejs.org/assets/directive.69c37117.png" alt="directive syntax graph"/>![image](https://user-images.githubusercontent.com/14286113/154809388-c6f361b8-d7a9-4bb3-aa13-541c3ab0c088.png)
 
+- To toggle more than one element with `v-if`, put `v-if` on the `template` tag and house all the elements to toggle inside there
+- Difference between `v-if` and `v-show`
+   - element with `v-show` will always be rendered and remain in the DOM
+      - it only toggles the display CSS property
+      - v-if removes element in and out of dom while v-show just changes the display
+   - `v-show` does not support template element nor does it work with v-else  
+
+- `v-if` has higher priority than `v-for`
+   - in order to nest `v-if` inside `v-for` (and allow `v-if` to access the variables in `v-for`), move `v-for` in template and use `v-if` inside the template
+
+- maintan the order of state and rendering for `v-for` with `key`
+   - needed when list rendering depends on child component state or some other state 
+   - do not use `objects` for `key`..keep it primitive
+```js
+<template v-for="todo in todos" :key="todo.name">
+  <li>{{ todo.name }}</li>
+</template>
+```
+- to pass data from `v-for` into componets, use props:
+```js
+<my-component
+  v-for="(item, index) in items"
+  :item="item"
+  :index="index"
+  :key="item.id"
+></my-component>
+```
+
+- you can invoke methods rather than pass them in as callbacks in template (ex: `@click="onClick('some arg')`) instead of just `@click="onClick"`
+- Access `event` with `$event` if using a function or just pass in `event` if using inline arrow function (see [link](https://vuejs.org/guide/essentials/event-handling.html#accessing-event-argument-in-inline-handlers))
+- Instead of dealing with DOM stuff inside handlers, like for calling `event.prevent` or `event.stop`, etc...you can use event modifiers for `v-on` to modify some handler without having to explicitly modify it inside the handler function
+
+![image](https://user-images.githubusercontent.com/14286113/154814405-97339156-7ca8-473e-93dd-593d26b4dc67.png)
+
+- `v-model` simplifies binding to the value attribute in input tags
+- can add modifiers to `v-model` to change how it behaves
+   - `.lazy` modifier will have the v-model sync input with the data after `change` events
+   - `.trim` will automatically trim whitespace 
+
+- Tempalte refs can be used to directly access DOM elements from `script setup`
+   - for refs used inside `v-for`, ref should contain an array value which would be populated with elements after mount 
+
 ## Reactivity
 
 ```js
@@ -168,7 +210,7 @@ function increment() {
    - refs are automatically unwrapped in the HTML so no need to use the `.value` to `{{}` to get access to the ref value
       - Only applies to top-level properties, not refs that are nested inside some object  
 
-## Computed proeprties
+## Computed properties
 
 - in-template expressions are meant for simple operations
 - to reduce clutter in the HTML and for complex logic, use computed properties
@@ -250,3 +292,42 @@ const publishedBooksMessage = computed(() => {
    - Using ternary expression: `<div :class="[isActive ? activeClass : '', errorClass]"></div>`
 - you can use the normal HTML class attribute in conjunction with `:class`
 - Attributes like `class` can be inherited from multiple root elements
+
+## Watchers
+
+- `watch()` can be used to trigger some callback whenever a piece of reactive state changes
+
+```js
+<script setup>
+import { ref, watch } from 'vue'
+
+const question = ref('')
+const answer = ref('Questions usually contain a question mark. ;-)')
+
+// watch works directly on a ref
+watch(question, async (newQuestion, oldQuestion) => {
+  if (newQuestion.indexOf('?') > -1) {
+    answer.value = 'Thinking...'
+    try {
+      const res = await fetch('https://yesno.wtf/api')
+      answer.value = (await res.json()).answer
+    } catch (e) {
+      answer.value = 'Error! Could not reach the API. ' + error
+    }
+  }
+})
+</script>
+
+<template>
+  <p>
+    Ask a yes/no question:
+    <input v-model="question" />
+  </p>
+  <p>{{ answer }}</p>
+</template>
+```
+
+- `watch()` is lazy, `watchEffect()` is not and performs side effect immediately
+- user-created watchers are called before DOM updates (so you can't access DOM and get updated values)
+   - in order to access DOM after Vue updates it, specify the `flush: post` option or use `watchPostEffect`
+- if watcher is created in callback/ async method, then you must stop it manually 
