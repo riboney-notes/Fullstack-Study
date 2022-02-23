@@ -271,9 +271,43 @@
       - becomes smaller and smaller till its only one block at the top
   - ![image](https://user-images.githubusercontent.com/14286113/155369277-bc98673e-470f-4b1f-bb82-416da023d0ae.png)
 
+
 - How rows containing indexed value is located:
   - Start from top-level block
   - compare index values to entries in the block
   - locate the next level block containing the value
   - Continue until bottom-level block containing the value is located
     - this block cotnains the pointer to the correct table block
+
+- Multi-level index vs Single-level index
+  - multi-level index are faster than single-level indexes (on most queries)
+  - multi-level index are more commonly used
+  - ![image](https://user-images.githubusercontent.com/14286113/155373970-53330972-37c2-429f-9166-a801f88cca91.png)
+
+**Balanced indexes**
+
+- Branch
+  - path from top-level block to a bottom-level block
+
+- Balanced indexes
+  - multi-level indexes when all branches are the same length
+
+- Imbalanced indexes
+  - multi-level indexes when all branches are the different lengths
+  - undesirable due to processing time being unpredictable
+
+**B- & B+ tree indexes**
+
+- B+tree
+  - balanced multi-level index where all indexed values abd pointers to table blocks appear in the bottom level 
+  - values can be repeated
+  - simpler than b-tree
+  - more commonly used
+  - Pros:
+    - bottom level is a single-level index that can be scanned or searched
+    - less harder to implement inserts, deletes, updates since all table pointers are at bottom level rather than on different levels like on b-tree
+
+- B-tree
+  - where if an indexed values appears in a higher level, then the pointer appears as well and then the value is not repeated at lower levels
+  - more compact than b+tree 
+    - since index values are not repeated
