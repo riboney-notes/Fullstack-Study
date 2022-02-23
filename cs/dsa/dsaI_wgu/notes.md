@@ -47,3 +47,75 @@
       - where connections are respresented among items and ocnsists of vertices connected by edges
       - vertex - item in a graph
       - edge - connection between two vertices in a graph
+
+### 3.3 Relation b/w DS and A
+
+- DS defines structure & operations
+- Algos implement operations and use DS for operations
+
+### 3.4 Abstract Data Type
+
+- Abstract data Type (ADT)
+ - data type described by predefined user operations w/o its implementation
+ - implementation is hidden 
+ - can use different underlying DS for implementation
+ - User only needs to know the interface of ADT
+
+- Common ADTs
+  - List
+    - hold ordered data
+    - DS: array, linked list
+  - Stack
+    - items are only inserted on or removed from top of a stack
+    - DS: linked list
+  - Queue
+    - items are inserted at the end of the queue and removed from the front of the queue
+    - DS: linked list
+  - Dequeue
+    - ADT in which items can be inserted and removed at both the front and back
+    - DS: linked list
+  - Bag
+    - ADT for storing items in whcih the order does not matter and duplicate items are allowed
+    - DS: array, linked list
+  - Set
+    - collection of distinct items
+    - DS: BST, hash table
+  - Priority Queue
+    - where each item has a priortiy, and items with higher priority are closer to the front of the queue than items with lower priority
+    - DS: Heap
+  - Dictionary
+    - ADT that associates or maps keys with values
+    - DS: Hash table, BST
+
+### 3.5 List ADT
+
+- List
+  - ADT for holding ordered data and having operations such as:
+    - Append - insert at end of list
+    - Prepend - insert at beg of list
+    - InsertAfter
+    - Remove - returns item or returns null if not found
+    - Search
+    - Print
+    - PrintReverse
+    - Sort - sorts in ascending order
+    - IsEmpty
+    - GetLength
+
+### 3.6 Queue ADT
+
+- Queue
+  - ADT in which items are inserted at the end of the queue and removed from the front of the queueu
+  - First-in First-out (FIFO)
+  - Implemented with linked list, array, or vector
+  - Operations:
+    - Push
+    - Pop
+    - Peek
+    - IsEmpty
+    - GetLength
+
+### 3.7 Applications of ADTs
+
+- Supports abstraction by hiding implementation and providing a well-defined set of operations for using the ADT
+- Enables programmers to focus on higher-level operations thus improving programmer efficiency
