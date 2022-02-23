@@ -311,3 +311,44 @@
   - where if an indexed values appears in a higher level, then the pointer appears as well and then the value is not repeated at lower levels
   - more compact than b+tree 
     - since index values are not repeated
+
+### 6.5 Other Indexes
+
+- **Hash index**
+  - index where entires are assigned to buckets
+  - buckets
+    - block or group of blocks containing index entries
+    - starts with one block and more are created/linked as indiex grows
+  - hash function
+    - computes a bucket number from the value of the indexed column
+    - determines the bucket for index entry
+  - ![image](https://user-images.githubusercontent.com/14286113/155393335-2a57a1c9-2ed2-46f4-aa13-47f3ad0758f6.png)
+
+- Hash index: how rows with specific column value are located 
+  - Apply hash function to column value to compute the bucket number
+  - Read index blocks for the bucket number
+  - find the index entry for the column value and read the table block pointer
+  - reads the table block containing the 
+
+- Hash index vs hash table
+  - hash index stores index entries in each bucket
+  - hash table stores table rows in each bucket
+
+- **Bitmap indexes**
+  - grid of bits (1s and 0s) where:
+    - row corresponds to unique table row
+      - row number can be primary key value or internal table row number maintained by the database
+    - column corresponds to a distinct table value
+    - `1` indicates that the table row corresponding to the index row number contains the table value coressponding to the index column number
+    - `0` indicates row does not contain the value
+
+- Bitmap index: locating row containing a table value
+  - Determine index column corresponding to the value that is being sought
+  - Read index column and finds index rows that are set to `1`
+  - Determines table rows corresponding to the index rows
+  - Determines pointers to blocks containing the table rows
+  - Reads the blocks containing the table rows
+
+- Pros of bitmap index
+  - quickly determine  the block containing a table row from index row number
+  - 
