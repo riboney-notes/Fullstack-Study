@@ -207,4 +207,73 @@
 - Pros of using index
   - Requires fewer blocks than a table 
     - since column value and pointer occupies less space
-  - 
+  - Fewer blocks = faster (than table scans) (when hit ratio is low)
+    - If small enough, then can reside in main memory to make it faster
+    - If sorted, then binary search can be used to make it faster
+
+**Sorted table indexes**
+
+- Dense index
+  - contains an entry for every table row
+
+- Sparse Index
+  - contains an entry for every table block
+
+- primary index
+  - unique sort column
+  - sparse (usually)
+
+- clustering index
+  - non-unique sort column
+  - sparse
+
+- secondary index
+  - non-sort column
+  - dense
+
+- Sort columns 
+  - Sorted table can only have one sort column
+    - so only one primary or clustering index
+  - Tables can have many secondary indexes
+    - Ex: all indexes of hash & heap tables are secondary; no sort column exists
+
+- Sparse is much faster
+  - Why?
+    - fewer entries and occupy fewer blocks
+    - stored in main memory (if small enough)
+
+- Operations on dense indexes
+  - Inserts
+    - slow because entries need to be moved
+      - Split block and reallocate entries to new block to make space for new entry
+  - Deletes
+    - Slow because entries need to be moved
+    - Entries are marked as "deleted"
+      - so periodically, database reorganizes the index to remove deleted entries and compress the index
+  - Updates
+    - Similiar to delete followed by an insert
+
+- Operations on sparse indexes
+  - Since each entry corresponds to table block (rather than table row like in dense index), entries are inserted or deleted when blocks split or merge
+    - this occurs less often than row inserts and deletes
+
+### 6.4 Multi-level indexes
+
+- multi-level index
+  - stores column values and row pointers in a hierarchy, bottom to top:
+    - Bottom:
+      - sorted column for single-level index that is:
+        -  sparse for primary & clustering indexes
+        -  dense for secondary indexes  
+    - Each level above the bottom:
+      - sparse sorted index to the level below
+    - Bottom to top:
+      - becomes smaller and smaller till its only one block at the top
+  - ![image](https://user-images.githubusercontent.com/14286113/155369277-bc98673e-470f-4b1f-bb82-416da023d0ae.png)
+
+- How rows containing indexed value is located:
+  - Start from top-level block
+  - compare index values to entries in the block
+  - locate the next level block containing the value
+  - Continue until bottom-level block containing the value is located
+    - this block cotnains the pointer to the correct table block
