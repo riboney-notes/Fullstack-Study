@@ -96,7 +96,7 @@
 - table structure
   - scheme for organizing rows in blocks on storage media
 
-- heap table
+- **Heap table**
   - no order is imposed on rows
   - What?
     - Databases mantains a list of blocks assigned to the table along with the address of the first available spaces for inserts (as a linked list)
@@ -110,7 +110,7 @@
 - Cons of Heap table
   - Not optimal for queries that read rows in specific order since rows are scattered randomly
 
-- Sorted table
+- **Sorted table**
   - database where a sort column is chosen to determine the physical ordering of rows
     - Ordering: rows are assigned to blocks according to the value of the sort column (ex: primary key)
 
@@ -130,7 +130,7 @@
 - How is sort order maintained?
   - Sort column order is based on linked list so inserts don't require moving all rows up or down
 
-- Hash table
+- **Hash table**
   - Where database allocates blocks to buckets (that contain initially one block) which become a chain of linked blocks as table grows
     - Allocation? How?
       - Bucket assignment is determined by hash function (computes bucket) & key (group of columns; commonly primary key)
@@ -147,7 +147,7 @@
   - Queries that select many rows with a range of values
     - Why? Rows are randomly distributed across many blocks
 
-- Table-Clusters (multi-tables)
+- **Table-Clusters** (multi-tables)
   - where rows of multiple tables are interleaved in the same storage area, maintained with the cluster key
   - Cluster key
     - a column that is avaiable in all interleaved tables
@@ -164,3 +164,47 @@
   - read multiple rows of a single table
     - requires accessing more blocks since the rows are spread out across many blocks
   - update clustering key
+
+### 6.3 Single-level indexes
+
+- Single-level index
+  - file consisting of column values and pointers (block identifiers) to the rows of the values in the table
+    - ![image](https://user-images.githubusercontent.com/14286113/155352456-ab3a76c4-8885-42bf-b17d-122e202b6843.png)
+  - Sorted on the column value 
+  - If column is unique, one entry in index for each column value
+    -  If not unique, then:
+      -  multiple entries for column values, or
+      -  one entry for each column value, followed by multiple pointers 
+  -  Multi-column index
+    -  Where an index is defined on multiple columns 
+      -  as opposed to single column which is the norm
+
+**Query processing**
+
+- table scan
+  - operations where table blocks are read directly without using an index
+  
+- index scan  
+  - operations where index blocks are read sequentially, in order to located the needed table blocks
+
+- Hit ratio
+  - percentage of table rows selected by a query
+  - AKA filter factor or selectivity
+
+- How are SELECT queries done?
+  - table scan or index scan
+
+- When is table or index scan used?
+  - If no index column, then table scan
+  - Else index column exists in WHERE clause, then database examines the WHERE clause and estimates the hit ratio 
+    - High hit ratio: table scan
+    - Low hit ratio:
+      - Look for indexed column in WHERE clause
+      - Scan index
+      - Find matching values
+      - Retrieve rows from the linked blocks to the found index values
+
+- Pros of using index
+  - Requires fewer blocks than a table 
+    - since column value and pointer occupies less space
+  - 
