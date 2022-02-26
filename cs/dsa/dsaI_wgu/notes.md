@@ -119,3 +119,7 @@
 
 - Supports abstraction by hiding implementation and providing a well-defined set of operations for using the ADT
 - Enables programmers to focus on higher-level operations thus improving programmer efficiency
+
+## Algorithms
+
+*Notes from ch 9-11*
