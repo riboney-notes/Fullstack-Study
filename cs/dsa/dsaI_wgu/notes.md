@@ -123,3 +123,53 @@
 ## Algorithms
 
 *Notes from ch 9-11*
+
+- Some scenarios for recursion:
+  - GCD
+  - factorial
+  - fibonacci
+  - Finding all possible combinations of a word's letters
+  - Finding all possible subsets of a set of items
+  - Finding all possible paths (traveling salesman)
+
+- Constant time operation
+  - operation that for a giving processor, always operates in the same amount of time regardless of input values
+  - ![image](https://user-images.githubusercontent.com/14286113/155863249-b3c658cb-fd23-4f66-adf0-cc57b8865155.png)
+  - ![image](https://user-images.githubusercontent.com/14286113/155863268-c638e04d-be0b-45bc-90c8-293d7db404d9.png)
+
+- Runtime complexity 
+  - `T(n)`, represents the number of constant time operations performed by the algorithn given an input size `n`
+  - best case
+    - the scenario that allows for minimum possible number of operations (can't be 0 operations)
+    - Lower bound: `f(N) <= `T(N)`
+  - worst case
+    - the scenario that requires maximum possible number of operations
+    - Upper bound: `f(N) >= `T(N)`
+  - ![image](https://user-images.githubusercontent.com/14286113/155863944-396f5700-7fda-4464-8b4b-8baff9750477.png)
+
+- Asymptotic notation
+  - classification of runtime complexity that uses functions that indicate only the growth rate of a bounding function (ie uses only the leading term of a function)
+  - _TODO: need to look this up more_
+  - ![image](https://user-images.githubusercontent.com/14286113/155863985-6e822b6f-a3c4-4016-8f2c-f89b95a31c93.png)
+
+- Space complexity
+  - `S(N) = N + k`, represents the number of fixed-size memory units used by algorithm for an input size of `N` and auxilary space `K` which is a constant
+  - input data + additional memory that doesnt include input data (for things like loop counter or object pointers)
+
+- Big O notation
+  - mathematical way of describing how a running time of an algorithm behaves in relation to the input size
+  - uses growth rate instead of the exact function of running time to denote Big O notation for a running time
+    - where `f(N)` is running time, if `f(N)` is sum of several terms, the highest order term (ie the fastest growth rate) is kept and others discarded
+    - if `f(N)` has a term that is a product of several factors, all constants (that are not in terms of `N`) are omitted
+    - ![image](https://user-images.githubusercontent.com/14286113/155865550-205ca612-0219-4aaf-8f90-2fb083b9cb12.png)
+
+- Growth rates for different input sizes and different Big O complexities
+![image](https://user-images.githubusercontent.com/14286113/155865587-88f40ee1-6b39-40b0-98cf-8210bc8cda6f.png)
+
+- Runtime analysis
+![image](https://user-images.githubusercontent.com/14286113/155865910-17b794f6-45b6-4bac-8056-7a1ccad11e56.png)
+
+- Any nummber of constant number of constant time operations is `O(1)`
+![image](https://user-images.githubusercontent.com/14286113/155866150-3b93dc3e-7d23-4c77-ae43-d85c56deebdf.png)
+
+
