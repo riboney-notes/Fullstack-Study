@@ -132,6 +132,9 @@
   - Finding all possible subsets of a set of items
   - Finding all possible paths (traveling salesman)
 
+- Binary search recursive algos
+![image](https://user-images.githubusercontent.com/14286113/155868311-bd93f7de-eca5-425c-b52b-b6036bb4ab72.png)
+
 - Constant time operation
   - operation that for a giving processor, always operates in the same amount of time regardless of input values
   - ![image](https://user-images.githubusercontent.com/14286113/155863249-b3c658cb-fd23-4f66-adf0-cc57b8865155.png)
@@ -171,5 +174,8 @@
 
 - Any nummber of constant number of constant time operations is `O(1)`
 ![image](https://user-images.githubusercontent.com/14286113/155866150-3b93dc3e-7d23-4c77-ae43-d85c56deebdf.png)
+
+- Run time analysis of nested loops
+![image](https://user-images.githubusercontent.com/14286113/155867979-d6b95112-81eb-4c87-b7f5-5a5f01af4c34.png)
 
 
