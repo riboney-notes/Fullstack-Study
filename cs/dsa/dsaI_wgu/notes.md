@@ -178,4 +178,21 @@
 - Run time analysis of nested loops
 ![image](https://user-images.githubusercontent.com/14286113/155867979-d6b95112-81eb-4c87-b7f5-5a5f01af4c34.png)
 
+- algorithm
+  -  sequence of steps for accomplishing a task
 
+- linear search
+  - search algo that starts from the beginning of a list and checks each element until the search key is found or the end of the list is reached
+
+```python
+def linear_search(arr, key):
+     for num, item in enumerate(arr):
+             if item == key:
+                     return num
+     return -1
+```
+
+- binary search
+  - search algorithm that requires list elements to be sorted and directly accessible for mutation 
+
+  
