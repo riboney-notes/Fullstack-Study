@@ -193,6 +193,8 @@ def linear_search(arr, key):
 ```
 
 - binary search
-  - search algorithm that requires list elements to be sorted and directly accessible for mutation 
+  - search algorithm that requires list elements to be sorted and directly accessible for mutation before it can search for key in list by this algorithm:
+    - Find middle element of list and check if it matches key; if it does, then return index of this element
+    - if not, then see if middle element is lower or higher than key and continue the search process with the correct sub list
 
   
