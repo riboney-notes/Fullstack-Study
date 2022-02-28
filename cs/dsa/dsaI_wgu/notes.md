@@ -186,9 +186,9 @@
 
 ```python
 def linear_search(arr, key):
-     for num, item in enumerate(arr):
-             if item == key:
-                     return num
+     for i in range(len(arr)):
+             if arr[i] == key:
+                     return i
      return -1
 ```
 
@@ -196,5 +196,30 @@ def linear_search(arr, key):
   - search algorithm that requires list elements to be sorted and directly accessible for mutation before it can search for key in list by this algorithm:
     - Find middle element of list and check if it matches key; if it does, then return index of this element
     - if not, then see if middle element is lower or higher than key and continue the search process with the correct sub list
-
+  - max number of steps: log(2)N + 1
+  ```python
+  def binary_search(arr, lowerIndex, higherIndex, key):
+    if higherIndex >= lowerIndex:
+      mid = (higherIdenx + lowerIndex)//2
+      if arr[mid] == key:
+        return mid
+      elif arr[mid] > key:
+        return binary_search(arr, lowerIndex, (mid-1), key)
+      else:
+        return binary_search(arr, (mid+1), higherIndex, key)
+    else:
+      return -1
+      
+  # iterative version
+  def binary_search_iterative(arr, key):
+    low = 0
+    mid = len(arr)
+    high = len(arr)
+    
+    while(high >= low):
+      mid = (high + low) // 2
+      if(arr[mid] == key):
+        return mid
+      elif (arr[
+  ```
   
