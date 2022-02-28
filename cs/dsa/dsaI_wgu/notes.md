@@ -220,6 +220,14 @@ def linear_search(arr, key):
       mid = (high + low) // 2
       if(arr[mid] == key):
         return mid
-      elif (arr[
+      elif (arr[mid] > key):
+        high = mid-1
+      else:
+        low = mid+1
+    
+    return -1
   ```
+  
+- selection sort
+  - sorting algorithm that treats the input as two parts: a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part
   
