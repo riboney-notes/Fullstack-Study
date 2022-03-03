@@ -230,4 +230,19 @@ def linear_search(arr, key):
   
 - selection sort
   - sorting algorithm that treats the input as two parts: a sorted part and an unsorted part, and repeatedly selects the proper next value to move from the unsorted part to the end of the sorted part
+  - Runtime: O(N^2)
   
+```python
+def selection_sort(arr):
+    temp = 0
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if(arr[i] > arr[j]):
+                temp = arr[i]
+                arr[i] = arr[j]
+                arr[j] = temp
+    return arr
+```
+
+- insertion sort
+  - sorting algo that treats inputs as two parts: a sorted part and unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part
