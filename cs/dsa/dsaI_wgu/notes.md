@@ -246,3 +246,62 @@ def selection_sort(arr):
 
 - insertion sort
   - sorting algo that treats inputs as two parts: a sorted part and unsorted part, and repeatedly inserts the next value from the unsorted part into the correct location in the sorted part
+  - runtime: O(N^2)
+    - for (full or nearly) sorted lists, runtime is O(N)
+      - diff between selection sort here ^...insertion sort does not require iterating through each list member if nearly sorted or during sorting
+
+```python
+def insertion_sort(arr):
+    # start from 1 because we assume at 0, list is sorted
+    for i in range(1, len(arr)):
+        j = i
+
+        while j > 0 and arr[j] < arr[j - 1]:
+            temp = arr[j]
+            arr[j] = arr[j-1]
+            arr[j-1] = temp
+            j -= 1
+    return arr
+```
+
+- shell sort
+  - sorting algo that treats the input as a collection of interleaved lists, and sorts each list individually with a variant of the insertion sort algo
+    - uses gap values to determine the number of interleaved lists (gap value of 3 means 3 interleaved lists)
+    - gap value - positive integer representing the distance between elements in an interleaved list
+      - for each interleaved list, if an element is at index i, the next element is at (index i + gap value)
+  - begins by choosing a gap value `K` and sorting `K` interleaved lists in place and finishes by performing standard insertion sort on the entire array
+    - ![image](https://user-images.githubusercontent.com/14286113/156668264-cb3a6b36-c46e-4100-8e27-5511afbb6177.png)
+    - ![image](https://user-images.githubusercontent.com/14286113/156668334-3e8f0358-570e-49cf-ba95-9f3a4d14b774.png)
+    - ![image](https://user-images.githubusercontent.com/14286113/156668372-ea1e2763-df33-470b-b293-cf1263ad3e9d.png)
+  - shell sort requires less swaps than insertion sort
+  - shell sort does not create interleaved lists, but rather sorts lists in place with insertion algos, doing `x+k` instead of `x+1`
+  - performas well when choosing gap values in decending order (ex: powers of 2 -1)
+  - shell sort sorts subsets of an input list
+    - instead of comparing elements that are immediately adjacent to each other, the insertion sort variant compares elements that are at a fixed distance apart (aka gap space); this process repeats using different gap sizes and starting points within the input list
+  - for small/ medium sized arrays, runtime is close to O(N) with best time (list is sorted) being O(n*logn) and worst being O(n*log^2n)
+    -  faster than bubble and insertion sort
+    -  various increment/ gap sequences can produce runtimes of On^2
+
+```python
+def inner_shell_sort(arr, start, gap):
+    for i in range(start+gap, len(arr), gap):
+        j = i
+        while (j - gap >= start) and (arr[j] < arr[j-gap]):
+            temp = arr[j]
+            arr[j] = arr[j-gap]
+            arr[j-gap] = temp
+            j = j-gap
+
+def shell_sort(arr, gap_values):
+    for gap_value in gap_values:
+        for i in range(gap_value):
+            inner_shell_sort(arr, i, gap_value)
+    return arr    
+```
+
+- quicksort
+  - sorting algorithm that repeatedly partitions (based on a pivot) the input into low and high parts (each part unsorted), and then recursively sorts each of those parts
+    - pivot - any value within the array being sorted, commonly the middle array element
+      - all values in the low partition would be less than or equal to the pivot value
+      - all values in the high partition would be greater than or equal to the pivot value
+  - ![image](https://user-images.githubusercontent.com/14286113/156682472-7d7aacc9-3f81-4cba-a59a-1d09f91f5b91.png)
