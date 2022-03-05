@@ -304,4 +304,6 @@ def shell_sort(arr, gap_values):
     - pivot - any value within the array being sorted, commonly the middle array element
       - all values in the low partition would be less than or equal to the pivot value
       - all values in the high partition would be greater than or equal to the pivot value
+      - Runtime: O(NLogN)
+        - Worst case O(N^2) but this is rare
   - ![image](https://user-images.githubusercontent.com/14286113/156682472-7d7aacc9-3f81-4cba-a59a-1d09f91f5b91.png)
