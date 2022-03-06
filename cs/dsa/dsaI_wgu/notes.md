@@ -373,3 +373,189 @@ print('SORTED:', numbers)
 ```
 - Merge sort
   - sorting algo that divides a list into two halves, recursively sorts each half, and then merges the sorted halves to produce a sorted list; the recursive partitioning continues until a list of 1 element is reached, as list of 1 element is already sorted
+  - ![image](https://user-images.githubusercontent.com/14286113/156906388-f2024379-8616-4da4-98d9-dfb7fa1a447b.png)
+
+  -  Runtime: O(NLogN)
+
+```python
+# numbers = arry containting the 2 sorted partitions to merge
+# i = start index of the first sorted partition
+# j = end index of the first sorted partiiton
+# k = end index of the second sorted postion
+def merge(numbers, i, j, k):
+    merged_size = k - i + 1               # Size of merged partition
+    merged_numbers = [0] * merged_size    # Dynamically allocates temporary array
+                                          # for merged numbers
+    merge_pos = 0                         # Position to insert merged number
+    left_pos = i                          # Initialize left partition position
+    right_pos = j + 1                     # Initialize right partition position
+   
+    # Add smallest element from left or right partition to merged numbers
+    while left_pos <= j and right_pos <= k:
+        if numbers[left_pos] <= numbers[right_pos]:
+            merged_numbers[merge_pos] = numbers[left_pos]
+            left_pos += 1
+        else:
+            merged_numbers[merge_pos] = numbers[right_pos]
+            right_pos += 1
+        merge_pos = merge_pos + 1
+   
+    # If left partition is not empty, add remaining elements to merged numbers
+    while left_pos <= j:
+        merged_numbers[merge_pos] = numbers[left_pos]
+        left_pos += 1
+        merge_pos += 1
+   
+    # If right partition is not empty, add remaining elements to merged numbers
+    while right_pos <= k:
+        merged_numbers[merge_pos] = numbers[right_pos]
+        right_pos = right_pos + 1
+        merge_pos = merge_pos + 1
+   
+    # Copy merge number back to numbers
+    for merge_pos in range(merged_size):
+        numbers[i + merge_pos] = merged_numbers[merge_pos]
+
+# numbers = array containing the partition to sort
+# i = start index of the partitiion to sort
+# k = end index of the partition to sort
+def merge_sort(numbers, i, k):
+    j = 0
+
+    if i < k:
+        j = (i + k) // 2  # Find the midpoint in the partition
+
+        # Recursively sort left and right partitions
+        merge_sort(numbers, i, j)
+        merge_sort(numbers, j + 1, k)
+            
+        # Merge left and right partition in sorted order
+        merge(numbers, i, j, k)
+
+
+# Create a list of unsorted values
+numbers = [61, 76, 19, 4, 94, 32, 27, 83, 58]
+
+# Print unsorted list
+print('UNSORTED:', numbers)
+
+# Initial call to merge_sort
+merge_sort(numbers, 0, len(numbers) - 1)
+
+# Print sorted list
+print('SORTED:', numbers)
+```
+
+- Bucket sort
+  - sorting algorithm that distributes numbers into buckets, sorts each bucket with an additional sorting algorithm, and then concatenates buckets together to build the sorted result
+  - bucket - container for numerical values in a specific range
+  - this sort algo is designed for arrays with non-negative numbers
+  - the term "bucket sort" is used to refer to a category of sorting algos, instead of a specific sorting algo
+    - refers to sorting algorithm that places numbers into buckets based on some common attribute, and then combines bucket contents to produce a sorted array 
+  ![image](https://user-images.githubusercontent.com/14286113/156908372-94768ab2-ad7c-4d3a-a26d-354f4e8eb2c7.png)
+
+- radix sort
+  - bucket algo that is specifically for integers; it processed on digit at a time starting with the least signifcant digit and ending with the most significant
+    - First, all array elements are placed into buckets based on the current digit's value
+    - Then, the array is rebuilt by removing all elements from buckets, in order from lowest bucket to highest 
+  - Runtime is O(N)
+  - Ex: sorting based on second digit:
+  ![image](https://user-images.githubusercontent.com/14286113/156908529-60ce8e41-a9f6-46d6-8178-4d32dfaa549a.png)
+
+  - Ex: then sorting based on first digit:
+  ![image](https://user-images.githubusercontent.com/14286113/156908548-3951c4a1-e2d7-4848-adab-4acf7658bf4d.png)
+
+```python
+# Returns the maximum length, in number of digits, out of all list elements 
+def radix_get_max_length(numbers):
+    max_digits = 0
+    for num in numbers:
+        digit_count = radix_get_length(num)
+        if digit_count > max_digits:
+            max_digits = digit_count
+    return max_digits
+
+
+# Returns the length, in number of digits, of value
+def radix_get_length(value):
+    if value == 0:
+        return 1
+   
+    digits = 0
+    while value != 0:
+        digits += 1
+        value = value // 10 
+    return digits
+
+
+def radix_sort(numbers):
+    buckets = []
+    for i in range(10):
+       buckets.append([])
+
+    # Find the max length, in number of digits
+    max_digits = radix_get_max_length(numbers)
+        
+    pow_10 = 1
+    for digit_index in range(max_digits):
+        for num in numbers:
+            bucket_index = (num // pow_10) % 10
+            buckets[bucket_index].append(num)
+
+        numbers.clear()
+        for bucket in buckets:
+            numbers.extend(bucket)
+            bucket.clear()
+      
+        pow_10 = pow_10 * 10
+   
+    negatives = []
+    non_negatives = []
+    for num in numbers:
+        if num < 0:
+            negatives.append(num)
+        else:
+            non_negatives.append(num)
+    negatives.reverse()
+    numbers.clear()
+    numbers.extend(negatives + non_negatives)
+
+
+# Create a list of unsorted values
+numbers = [47, 81, 13, 5, 38, 96, 51, 64]
+
+# Print unsorted list
+print('UNSORTED:', numbers)
+
+# Call radix_sort to sort the list
+radix_sort(numbers)
+
+# Print sorted list
+print('SORTED:', numbers)
+
+# UNSORTED: [47, 81, 13, 5, 38, 96, 51, 64] 
+# SORTED: [5, 13, 38, 47, 51, 64, 81, 96]
+```
+
+- bubble sort
+  - sorting algo that iterates through a list, comparing and swapping adjacent elements if the second element is less than the first element
+  - Runtime: O(N^2) due to nested loops
+  - ![image](https://user-images.githubusercontent.com/14286113/156908936-2c8de9f7-8521-4c70-8b86-19ef79926844.png)
+
+- quickselect
+  - algo tht selects the Kth smallest element in a list (Ex: k=0 means return the first smallest element in the list)
+  - for a list of N elements, quickselect uses quicksort's partition function to partition the list into a low partitition containing the X smallests elements and a high partition containig the N-X largests elemnts
+    -   the Kth smallest element is in the low partition if K is <= the last index in the low parition and high partition otherwise
+    -   quickselect is recursively called on the partition that contains the kth element; when a partition of size 1 is encountered, quickselect has found the kth smallest element
+  - partially sorts the list
+  - Runtime (best case and average): O(N)
+  - Worst time (when sorting the entire list): O(N^2)
+  - ![image](https://user-images.githubusercontent.com/14286113/156909382-9b31f673-2a79-4af7-945c-a4e5c2b39865.png)
+
+
+- Overview of sorting algos
+
+![image](https://user-images.githubusercontent.com/14286113/156908740-e7bf6f08-0d30-4e10-9cf0-a36139def4d9.png)
+![image](https://user-images.githubusercontent.com/14286113/156908777-3b8f7862-5ecd-4c97-a4bc-7c63f50fb939.png)
+
+
