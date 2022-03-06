@@ -371,3 +371,5 @@ print('SORTED:', numbers)
 # UNSORTED: [12, 18, 3, 7, 32, 14, 91, 16, 8, 57]
 # SORTED: [3, 7, 8, 12, 14, 16, 18, 32, 57, 91]
 ```
+- Merge sort
+  - sorting algo that divides a list into two halves, recursively sorts each half, and then merges the sorted halves to produce a sorted list; the recursive partitioning continues until a list of 1 element is reached, as list of 1 element is already sorted
