@@ -564,10 +564,54 @@ print('SORTED:', numbers)
   - list where elements contain pointers to the next and/or previous elements in the list
 
 - singly-linked list
-  - data structure for implementing a list ADT, where each node has data and a pointer to the next node
+  - data structure for implementing a list ADT, where each node has data (value) and a pointer to the next node
   - type of positional list
   - Head: first node
   - Tail: last node
+    - for a list with only one node, the head and tail are the same 
   - null: special vlaue indicating a pointer points to nothing
+  - Ex of list: 
+  ![image](https://user-images.githubusercontent.com/14286113/157033103-b958fc8a-2a86-4a12-89f9-3706640c385d.png)
 
-
+  - Append operation
+    - Inserts new node after the list's tail node
+    ```python
+    def append(list, newNode):
+      if(list.head == null):
+        list.head = newNode
+        list.tail = newNode
+      else:
+        list.tail.next = newNode
+        list.tail = newNode
+    ```
+    
+  - Prepend operation
+    - inserts new node before the list's head node
+    ```python
+    def prepend(list, newNode):
+      if(list.head == null):
+        list.head = newNode
+        list.tail = newNode
+      else:
+        newNode.next = list.head
+        list.head = newNode
+    ```
+    
+  - Insert operation
+    - inserts new node after a provided existing list node, *curNode*
+    ```python
+    def insert(list, curNode, newNode):
+      if(list.head == null):
+        list.head = newNode
+        list.tail = newNode
+      else if(curNode == list.tail):
+        list.tail.next = newNode
+        list.tail = newNode
+      else:
+        newNode.next = curNode.next
+        curNode.next = newNode
+    ```
+    
+  - Remove Operation
+    - removes node after the specified list node, *curNode*
+    -  
