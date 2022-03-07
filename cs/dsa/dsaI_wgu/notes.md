@@ -614,4 +614,193 @@ print('SORTED:', numbers)
     
   - Remove Operation
     - removes node after the specified list node, *curNode*
-    -  
+    ```python
+    def remove(list, curNode):
+      if(curNode == 0 and list.head != null:
+        successorNode = list.head.next
+        list.head = successorNode
+        if(successorNode == null):
+          list.tail = null
+      elif(curNode.next != null):
+        successorNode = curNode.next.next
+        curNode.next = sucessorNode
+        if(successorNode == null):
+          list.tail = curNode
+    ```
+    
+- node python implementation:
+
+```python
+class Node:
+  def __init__(self, initial_data):
+    self.data = intitial_data
+    self.next = None
+    self.prev = None
+  
+  # ex_node = Node(95) --> Creates node with a data value of 95
+  
+```
+
+- python linkedList implementation:
+
+
+```python
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def append(self, new_node):
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+
+    def prepend(self, new_node):
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head = new_node
+
+    def insert_after(self, current_node, new_node):
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        elif current_node is self.tail:
+            self.tail.next = new_node
+            self.tail = new_node
+        else:
+            new_node.next = current_node.next
+            current_node.next = new_node
+   
+    def remove_after(self, current_node):
+        # Special case, remove head
+        if (current_node == None) and (self.head != None):
+            succeeding_node = self.head.next
+            self.head = succeeding_node  
+            if succeeding_node == None: # Remove last item
+                self.tail = None
+        elif current_node.next != None:
+            succeeding_node = current_node.next.next
+            current_node.next = succeeding_node
+            if succeeding_node == None: # Remove tail
+                self.tail = current_node
+```
+
+- doubly-linked list
+  - data structure for implementing a list ADT, similiar to singly linked list where each node has data and two pointers: a pointer to the next node, and (unlike singly linked list) a pointer to the previous node
+  - type of positional list
+  
+```python
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def append(self, new_node):
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            new_node.prev = self.tail
+            self.tail = new_node
+
+    def prepend(self, new_node):
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
+
+
+    def insert_after(self, current_node, new_node):
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        elif current_node is self.tail:
+            self.tail.next = new_node
+            new_node.prev = self.tail
+            self.tail = new_node
+        else:
+            successor_node = current_node.next
+            new_node.next = successor_node
+            new_node.prev = current_node
+            current_node.next = new_node
+            successor_node.prev = new_node
+   
+    def remove(self, current_node):
+        successor_node = current_node.next
+        predecessor_node = current_node.prev
+
+        if successor_node is not None:
+            successor_node.prev = predecessor_node
+
+        if predecessor_node is not None:
+            predecessor_node.next = successor_node
+
+        if current_node is self.head:
+            self.head = successor_node
+
+        if current_node is self.tail:
+            self.tail = predecessor_node
+```
+
+- Circular linked list
+  - linked list where the tail node's next pointer points to the head of the list (start node), instead of null 
+  - used to represent repeating processes
+  - ![image](![image](https://user-images.githubusercontent.com/14286113/157063300-11acc6a7-fe09-4472-9879-fc5842cc549d.png)
+  - Traversal works by terminating when reaching startNode (instead of null)
+
+- Linked list traversal & search
+
+```python
+
+def traverseList(list):
+  curNode = list.head
+  
+  while(curNode != None):
+    # do some operation
+    curNode = curNode.next
+
+# supported by doubly linked list
+def reverseTraverseList(list):
+  curNode = list.tail
+  
+  while(curNode != null):
+    # do some operation
+    curNode = curNode.prev
+
+def search(list, key):
+  curNode = list.head
+  
+  while(curNode != null):
+    if(curNode.data != null):
+      return curNode
+      
+    curNode = curNode.next
+    
+  return null
+    
+ ```
+
+- stack
+  - ADT in which items are only inserted on or removed from the top of a stack (the first/ head element)
+  - Can be implemented using linked list (co, array, or vector
+  - last-in first-out
+  - Stack operations
+  ![image](https://user-images.githubusercontent.com/14286113/157064922-9df71302-1c1c-44de-b5bf-9498ce0f1709.png)
+  
+- Queue
+  - commonly implemented using linked list where list's head node represents queue's front and list's tail node represents the queue's end
+  - pushing item means appending to the tail 
+  - popping items means removing items from the head
+
+- Dequeue
+  - ADT in which items can be inserted and removed at both the front and back (unlike Queue where items are inserted at the end, and removed from the front)
