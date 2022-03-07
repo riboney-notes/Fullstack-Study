@@ -558,4 +558,16 @@ print('SORTED:', numbers)
 ![image](https://user-images.githubusercontent.com/14286113/156908740-e7bf6f08-0d30-4e10-9cf0-a36139def4d9.png)
 ![image](https://user-images.githubusercontent.com/14286113/156908777-3b8f7862-5ecd-4c97-a4bc-7c63f50fb939.png)
 
+## 12: Lists, Stacks, Queues
+
+- positional list
+  - list where elements contain pointers to the next and/or previous elements in the list
+
+- singly-linked list
+  - data structure for implementing a list ADT, where each node has data and a pointer to the next node
+  - type of positional list
+  - Head: first node
+  - Tail: last node
+  - null: special vlaue indicating a pointer points to nothing
+
 
