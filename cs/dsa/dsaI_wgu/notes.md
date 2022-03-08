@@ -906,8 +906,11 @@ def find_insertion_position(self, data_value):
 - Array-based lists
   - Since arrays have a fixed-size, array-based list implementations will dynamically allocate the array as needed as the number of elements changes
 
+## 13 Hash Table
+
 - Hash table
   - data structures that stores unordered items by mapping (or hashing) each item to a location in an array (or vector)
+  - implemented using a Class with a list variable as a property
   - Advantage: searching, inserting, and removal is O(1)
     - possible by mapping item's key to an index that can be calculated with a hash function
   - hash function: computes bucket (hash table array elememnt) index from item's key
@@ -918,10 +921,14 @@ def find_insertion_position(self, data_value):
 - Collisions
   - occurs when an item being inserted into a hash table maps to the same bucket as an existing item in the hash table
   - handled by chaining or open addressing
-  
+
+- Open addressing
+  - collision resolution technique where collisions are resolved by looking for an empty bucket elsewhere in the table
+
 - Chaining
   - collision resolution technique where each bucket has a list of items so elements with the same computed bucket index will be stored in the bucket list, which may store multiple items that map to the same bucket
   - Removing/ Searching for items in hash table that uses chaining involves determining the bucket index and then searching the bucket list
+  - a good hash function results in short bucket lists (for faster inserts, searches, and removes)
 
 - Linear probing
   - a way to handle collisions by starting at key's mapped bucket and linearly searching the subsequent buckets until an empty bucket is found
@@ -929,8 +936,78 @@ def find_insertion_position(self, data_value):
     - if reach last bucket, continue at bucket 0 until reaching the original bucket index...return 0 to indicate all buckets are occupied otherwise return true
   - search/ removal is done by probing each bucket until a matching item is found, an empty-since-start bucket is found, or all buckets have been probed
     - buckets that are marked empty-after-removal does not terminate the remove operation search
+  - a good hash function will avoid hashing multiple items to consecutive buckets and thus minimize the average linear probing length to achieve fast inserts, searches, and removes
   
-- Open addressing
-  - collision resolution technique where collisions are resolved by looking for an empty bucket elsewhere in the table
+- Quadratic probing
+  - handles collision by starting at the key's mapped bucket, and then quadratically searches subsequent buckets until an empty bucket is found
+    - uses a quadratic formula for this
 
+- double hashing
+  - open-addressing collision resolution technique that uses 2 different hash functions to compute bucket indexes
+    - uses a probing sequence to iterate through values of `i` to find an empty bucket
 
+- mid-square hash function
+  - squares the key, extracts R digits from the result's middle, and returns the remainder of the middle digits divided by hash table size N
+  - the *base 2* implementation
+    - is faster since it only requires few shift and bitwise operations
+
+- multiplicative string hash function
+  - repeatedly multiplies the hash value and adds the ASCII value of each character in the string;  A multiplicative hash function for strings starts with a large initial value. For each character, the hash function multiplies the current hash value by a multiplier (often prime) and adds the character's value. Finally, the function returns the remainder of the sum divided by the hash table size N.
+
+- direct hash function
+  - uses the item's key as the bucket index
+  - direct access table: hash table with a direct hash function
+  - limitations:
+    - all keys must be postive even tho they may need to be negative for application
+    - hash table size equals the largest key value, so it will be very large
+  - advantage:  no collisions since each key is unique and gets unique bucket
+
+## 14 Trees
+
+- Binary tree
+  - where each node has up to two children (left and right child)
+  - leaf - a tree node with no children
+  - internal node - a node with at least one child
+  - parent - a node with a child 
+  - root - one tree node with no parent; the top node
+  - edge - link from a node to a child
+  - depth - number of edges on the path from the root to the node
+    - root node has depth of 0
+  - level - nodes with same depth form a tree level
+  - height - largest depth of any nodel its the max # of edges from root to any leaf
+    - tree with one node has height of 0
+    - height = log2N, where `N` is the number of nodes in a tree
+    - operations are faster if height is small
+    - random insertions keeps height near the minimum whereas inserting items in a nearly sorted order (root is small, to biggest) leads to nearly maximum tree height
+      - nearly maximum height = N -1
+    ![image](https://user-images.githubusercontent.com/14286113/157170144-dcb4c76f-496f-4523-abb2-83e741d97d13.png)
+
+  - binary tree is full, if every node contains 0 or 2 children
+  - binary tree is complete, if all levels, except possibly last level, are completely full and all nodes in the last level are as far left as possible
+  - binary tree is perfect, if all internal nodes have 2 children and all leaf nodes are at the same level
+  ![image](https://user-images.githubusercontent.com/14286113/157165556-e2775a18-1908-4417-ba42-eeeb9b5a0d95.png)
+
+- binary search tree
+  - form of binary tree that has an ordering property where any node's left subtree keys <= node's key, and right subtree's keys >= nodes key
+  - duplicate values are allowed
+  ![image](https://user-images.githubusercontent.com/14286113/157165845-96a457c5-65a1-40d3-841e-7cfc0f41fdad.png)
+
+  -  search runtime
+    -  O(H) where H is the tree height and tree height might be small as O(logN) for N number of nodes
+    -  height can be kept minimized by keeping all levels full, except possibly at the last level; such a tree will have height of log2N
+  -  ordering is smallest to largest
+    -  smallest is the last left leaf node going up and down to the right most last leaf node
+    -  ![image](https://user-images.githubusercontent.com/14286113/157166758-49c4be81-899f-4886-9130-a4e74843437d.png)
+  -  BST search begins from tree root and traversing left or right downwards from there based on whether key is less than (go left) or greater than (go right) the node
+    -  number of iterations for tree with N nodes is Log2N
+  -  insert operations
+    - inserts must obey BST ordering property
+    - runtime is O(N) worst casea nd O(LogN) best case
+  - remove operation
+    - removes first-found matching node, restructuring the tree to preserve the BST ordering property
+    - requires replacing found node with successor 
+  - inorder traversal
+    - this is where you visit all nodes in a BST from smallest to largest
+    - requires starting at root, and recurively going down the left side to the right side
+
+## 15: Heap
