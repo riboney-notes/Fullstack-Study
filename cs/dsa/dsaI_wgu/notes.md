@@ -1011,3 +1011,34 @@ def find_insertion_position(self, data_value):
     - requires starting at root, and recurively going down the left side to the right side
 
 ## 15: Heap
+
+- max-heap
+  - complete binary tree that maintains the simple property that a node's key is greater than or equal to the node's children's keys
+  - max-heap's root is always the maximum key in the entire tree
+  - max-heap with N nodes has height of logN
+  - ![image](https://user-images.githubusercontent.com/14286113/157178151-b1e35452-6d53-4b84-9b68-5c5affe81476.png)
+  
+  - insert operation
+    - starts by inserting node in tree's last level, and then swapping the node with its parent until no max-heap property violation occurs
+    - does this by filling a level left to right before adding another level
+      - therefore, tree's height is always the minimum possible
+    - percolating: the upward movement of a node in a max-heap insert
+
+  - remove operation
+    - is always a removal of the root and is done by replacing the root with the last level's last node and swapping that node with its greatest child until no max-heap property violation occurs
+
+- heap storage
+  - heaps can be displayed in tree form, but they are stored in array form
+  - array form is produced by traversing the tree's levels from left to right, and top to bottom
+    - so root node would always be at index 0 in the array
+    ![image](https://user-images.githubusercontent.com/14286113/157179128-9512474d-38af-40f4-9803-87f83a3599da.png)
+
+- priority queue
+  - a queue where each item has a priority, and items with higher priority are closer to the front of the queue than items with lower priority
+  - push oepration inserts an item such that the item is closer to the front than all items of lower priority and closer to the end than all items of equal or higher priority
+  - pop operation removes and returns the item at the front of the queue, that is the highest priority
+  - commonly implemented with heaps as heap will keep the highest priority item in the root node and allow access in O(1) time and adding/ removing would be O(logN) worstcase
+
+- heapsort
+  - sorting algorithm that takes advantage of max-heap's properties by repeatedly removing the max and building a sorted array in reverse order
+  - ![image](https://user-images.githubusercontent.com/14286113/157182125-ec6578f7-344f-4d3e-998b-13c3e1775012.png)
