@@ -925,8 +925,10 @@ def find_insertion_position(self, data_value):
 
 - Linear probing
   - a way to handle collisions by starting at key's mapped bucket and linearly searching the subsequent buckets until an empty bucket is found
-  - inserts
-    - 
+  - inserts are done determinig bucket, then linearly probing each bucket for an empty one to insert the item
+    - if reach last bucket, continue at bucket 0 until reaching the original bucket index...return 0 to indicate all buckets are occupied otherwise return true
+  - search/ removal is done by probing each bucket until a matching item is found, an empty-since-start bucket is found, or all buckets have been probed
+    - buckets that are marked empty-after-removal does not terminate the remove operation search
   
 - Open addressing
   - collision resolution technique where collisions are resolved by looking for an empty bucket elsewhere in the table
