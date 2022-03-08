@@ -792,15 +792,143 @@ def search(list, key):
 
 - stack
   - ADT in which items are only inserted on or removed from the top of a stack (the first/ head element)
-  - Can be implemented using linked list (co, array, or vector
+  - Can be implemented using linked list (co, array, or vector)
+    - push uses linkedlist's prepend() 
+    - pop uses linkedList's removeAfter(none) (or 0 for beginning of the list)
   - last-in first-out
   - Stack operations
   ![image](https://user-images.githubusercontent.com/14286113/157064922-9df71302-1c1c-44de-b5bf-9498ce0f1709.png)
+ 
+```python
+class Stack:
+    def __init__(self):
+        self.list = LinkedList()
+        
+    def push(self, new_item):
+        self.list.prepend(new_item)    # Insert as list head (top of stack)
+    
+    def pop(self):
+        popped_item = self.list.head   # Copy list head (top of stack)
+        self.list.remove_after(None)   # Remove list head
+        return popped_item             # Return popped item
+```
   
 - Queue
   - commonly implemented using linked list where list's head node represents queue's front and list's tail node represents the queue's end
   - pushing item means appending to the tail 
   - popping items means removing items from the head
 
+```python
+class Queue:
+    def __init__(self):
+        self.list = LinkedList()
+        
+    def push(self, new_item):
+        self.list.append(new_item)     # Insert as list tail (end of queue)
+    
+    def pop(self):
+        popped_item = self.list.head   # Copy list head (front of queue)
+        self.list.remove_after(None)   # Remove list head
+        return popped_item             # Return popped item
+```
+
 - Dequeue
   - ADT in which items can be inserted and removed at both the front and back (unlike Queue where items are inserted at the end, and removed from the front)
+  - Operations
+  ![image](https://user-images.githubusercontent.com/14286113/157111119-1749764c-4f8d-4596-9db7-b4c18dc09378.png)
+
+- Sorting algos on linked lists
+  - Insertion sort
+    - Requires searching from head of the list for an element's insertion position (singly-linked list) whereas insertion sort operates similiarly to arrays for doubly linked lists since it has ability for backward traversal
+  - Merge sort
+    - Requires finding the middle of the list by searching linearly from the head of the list
+  - Shell sort
+    - cannot be done efficiently since requires jumping the gap between elements which can't be done in linked list (since each element between two elements must be traversed)
+  - Quicksort
+    - cannot be done efficiently (for singly linked list) since partitioning requires backward traversal through the right portion of the array and singly linked lists do not support this
+  - Heap sort
+    - cannot be done efficiently since indexes access is required to find child nodes in constant time when percolating down
+
+- doubly linked list insertion sort
+
+```python
+def insertion_sort_doubly_linked(self):
+    current_node = self.head.next
+    while current_node != None:
+        next_node = current_node.next
+        search_node = current_node.prev
+         
+        while ((search_node != None) and 
+               (search_node.data > current_node.data)):
+            search_node = search_node.prev
+      
+        # Remove and re-insert curNode
+        self.remove(current_node)
+            
+        if search_node == None:
+            current_node.prev = None
+            self.prepend(current_node)      
+        else:
+            self.insert_after(search_node, current_node)
+
+        # Advance to next node
+        current_node = next_node
+```
+
+- singly-linked list insertion sort
+
+```python
+def insertion_sort_singly_linked(self):
+    before_current = self.head
+    current_node = self.head.next
+    while current_node != None:
+        next_node = current_node.next
+        position = self.find_insertion_position(current_node.data)
+        if position == before_current:
+            before_current = current_node
+        else:
+            self.remove_after(before_current)
+            if position == None:
+                self.prepend(current_node)
+            else:
+                self.insert_after(position, current_node)
+        current_node = next_node
+
+def find_insertion_position(self, data_value):
+    position_a = None
+    position_b = self.head
+    while (position_b != None) and (data_value > position_b.data):
+        position_a = position_b
+        position_b = position_b.next
+    return position_a
+```
+
+- Array-based lists
+  - Since arrays have a fixed-size, array-based list implementations will dynamically allocate the array as needed as the number of elements changes
+
+- Hash table
+  - data structures that stores unordered items by mapping (or hashing) each item to a location in an array (or vector)
+  - Advantage: searching, inserting, and removal is O(1)
+    - possible by mapping item's key to an index that can be calculated with a hash function
+  - hash function: computes bucket (hash table array elememnt) index from item's key
+    - one hash function is using the module operator `%` to do `key % tableSize` to compute the bucket index
+      - Ex: key % 20 will map keys to bucket indices 0 to 19
+  - ![image](https://user-images.githubusercontent.com/14286113/157137663-d70c7590-308d-4910-b72b-3af75c583eb5.png)
+
+- Collisions
+  - occurs when an item being inserted into a hash table maps to the same bucket as an existing item in the hash table
+  - handled by chaining or open addressing
+  
+- Chaining
+  - collision resolution technique where each bucket has a list of items so elements with the same computed bucket index will be stored in the bucket list, which may store multiple items that map to the same bucket
+  - Removing/ Searching for items in hash table that uses chaining involves determining the bucket index and then searching the bucket list
+
+- Linear probing
+  - a way to handle collisions by starting at key's mapped bucket and linearly searching the subsequent buckets until an empty bucket is found
+  - inserts
+    - 
+  
+- Open addressing
+  - collision resolution technique where collisions are resolved by looking for an empty bucket elsewhere in the table
+
+
