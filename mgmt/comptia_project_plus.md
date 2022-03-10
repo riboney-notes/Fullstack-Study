@@ -116,3 +116,175 @@
 
 - Ex: Postive stakeholder can be the business people who will profit and the negative stakeholder can be the environmentalist group that considers the project to be harmful
 
+### 1B: Describe the project life cycle
+
+**process**
+
+- sequence of activities designed to bring about a specific result in response to a business need
+
+**Project mgmt processes
+
+- all activities that underlie the effective practice of project mgmt; they are grouped into intiating/ pre-project setup, planning, executing, montioring/ controlling, and clsing a project
+
+**Project Life Cylce Phases/ process groups**
+
+- _Initiating_ - defining need for project, assignment of managers and reps, goals and objectives, etc 
+- _planning_ - addressing scope, time, cost, risk, etc and refining objectives and developing strategy
+- _executing_ - carrying out work mentioned in project planning
+- _monitoring/ controlling_ - regular monitoring of project performance and tracking progress made and getting back on track when needed
+- _closing_ - finalzing project activies, and cleaning up
+
+**Tailoring**
+
+- determining which processes are appropriate for a given project
+
+**Project Prototyping**
+- process of creating a mock-up of a product or system
+
+**Proof-of-principle**
+- prototyping model that enables you to check some aspects of product design without considering the visual appearance, materials to be used, or the manufacturing process
+
+**Form study**
+- prototyping model that enables you to check the primary size and appearance of a product without simulating its exact function or design
+
+**visual**
+- prototyping model that enables you to check the design and imitate the appearnace, color, and surface textures of the product but will not contain the funcitons of the final product
+
+**functional**
+- prototyping model that enables you to check the apperance, materials, and functionality of the expected design
+
+**Project stages**
+- group of related project activities that results in the completion of a major deliverable
+
+**Project governance**
+- comprehensive methodology to cotnrol a project and ensure its success
+
+**Phase-gate review**
+- aka governance-gate review; a checkpoint review of project deliverables and performance that occurs at the end of each phase of a project where a mgmt review or sign-off may be required
+
+**Quality-gate**
+- ...
+
+**phase-to-phase relationship types**
+- sequential
+- overlapping
+- iterative
+
+**progressive elaboration**
+- process of increasing the level of detail in a project management plan as more information and more accurate estimates become available
+
+**rolling wave planning**
+- technique in which work to be accomplished in the near term is planned in detail, whereas future work is planned with much less detail; as time progresses, the "wave" rolls forward so near-term work is always planned in more detail
+
+### 1C: Identify organizational influences on project management
+
+**organizational process assets**
+- entitites that can be used to influence the sucess of a project
+- Ex: policies, guidelines, schedules, risk data, etc
+- Two categories
+  - processes and procedures
+  - corporate knowledge base
+
+**Enterprise environmental factors**
+- internal or external factors that can have a postive or negatuve influence on the project outcome
+- Ex: culture, marketplace ocnidtions, political situations, etc
+
+**Expert Judgement**
+- advice provided by individuals having expertise in a specific knowledge area, an application area, industry, or discipline
+
+**Project interfaces**
+- various reporting relationships that occur within a project and on the boundaries of the project
+- organizational (ie between managers of groups)
+- technical (ie between backend and frontend)
+- interpersonal (ie between project members)
+- logistical (ie relationships between project team  members in different parts of the world)
+
+**Organizational structure**
+- compositional makeup of an organization that describes how various groups and individuals within the organization interrelate
+
+**organization chart**
+- visual representation of a project's organizational structure
+- shows reporting relationships within the project and project's relationship to the parent organization
+
+**Functional organizational structure**
+- Each department is responsible for carrying out a specific similiar set of activities
+- multiple people perform each type of activity
+- reporting is hierarchical, with each individual reporting to a single manager
+  - team members report only to their functional manager
+  - project manager reports to functional manager
+- Project manager is parttime; team members are parttime
+- project manager's authority is low, relative to the functional manager's authority
+- inefficient project organization
+- ![image](https://user-images.githubusercontent.com/14286113/157568827-20a8ea26-db53-4b64-8faf-eb6fcd062dcb.png)
+
+**Matrix organizational Structure**
+- mix of functional and projectized when it comes to reporting
+- reporting scheme may be permanent or temporary
+- It being weak, balanced, or strong depends on the relative authority of project manager to the functional manager
+  - ex: Strong matrix if project manager's authority is higher than that of the functional manager
+- Project manager is fulltime; team members are part time
+- Costly and complex but effective
+- ![image](https://user-images.githubusercontent.com/14286113/157569452-6dee804e-7313-4f8e-a5b6-db971c087ee3.png)
+
+**Projectized organizational structure**
+- where project manager and core project team operate as a complete separate organizational unit within the parent organization
+  - don't belong to a department so they are loyal only to the project
+- team members are co-located
+- project manager reports to program manager
+- project manager has significant amount of authority and independence
+- efficient project organization
+- Ex: consulting firms or engineering firms
+- ![image](https://user-images.githubusercontent.com/14286113/157569759-7b3c7fd1-5341-4c86-b6dd-4fe69079ceaf.png)
+
+**composite organizational structure**
+- combination of all the other types of organziations
+
+**Relative authority in organizational structures**
+- refers to the project manager's authority relative to the functional manager's authority over a project and project team
+![image](https://user-images.githubusercontent.com/14286113/157569991-b68b2c25-27cf-410d-b959-dacccd63aac0.png)
+![image](https://user-images.githubusercontent.com/14286113/157570020-30b1cccf-e0b0-487d-9e8c-8feb8d8259eb.png)
+
+### 1D: Define Agile Methodology
+
+- agile project management
+- Principles of Agile
+  - Customer value
+  - Iterative and incremental delivery
+  - intense collaboration
+  - small and integrated teams
+  - self organizing teams
+  - small and continuous improvements
+- Scrum
+- User Stories
+- Scrum roles
+  - Product Owner
+  - Scrum Master
+  - Scrum team
+  - Stakeholders
+  - Customers
+- Stages of Scrum Process
+  - Create Vision for project (talk to people, requirements gathering)
+  - Create a Product backlog (Refine requirements and determine their priority)
+  - Set a broad release plan (release type, date, and major componenets of release)
+  - Create a Sprint backlog 
+- Product backlog
+- Sprint backlog
+- Sprint Cycle
+- Iterative Approach
+- Burndown chart
+- Daily standup meetings
+- Closure Process
+  - Sprint retrospective
+  - Starting next sprint
+  - release planning
+
+## 2 Initiating the Project
+
+*Objectives*
+- Identify project selection process
+- Prepare a project statement of work
+- Create a project charter
+- Identify project stakeholders
+
+## 2A: Identify the Project Selection Process
+
