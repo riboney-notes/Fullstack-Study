@@ -288,3 +288,52 @@
 
 ## 2A: Identify the Project Selection Process
 
+- Strategic relevenace
+- operational relevenace
+- Project requirement
+  - Business requirement (why)
+  - Functional requirement (what)
+  - Technical requirement (how)
+- Project Selection
+- Project criteria
+- Project Selection methods
+- Project selection decision model
+  - Benefit measurement models
+    - Internal Rate of Return (IRR)
+  - Mathematical models
+- Capital Budgeting
+  - Payback period
+  - Discounted Cash Flow (DCF)
+  - Net Present Value (NPV)
+- Desision Tree
+- Criteria profiling
+- Weighted Factor
+- Q-Sorting
+- Delphi Technique
+- Feasiblity analysis
+- Cultural Feasibility
+- Technical feasibility
+- First-time/first use penalty
+- Cost-benefit analysis
+- Workflow analysis
+- Usecase analysis
+  - prototype
+  - scenarios
+
+### 2B: Prepare a Project SOW
+
+- Statement of Work (SOW)
+  - Buesiness need
+  - High-level scope definition
+  - Strategic plan
+
+### 2C: Create a Project Charter
+
+- business case
+  - business need
+  - project contribution
+  - stakeholders
+  - constraints
+  - strategic risks
+  - benefits evaluation
+- Project charter
