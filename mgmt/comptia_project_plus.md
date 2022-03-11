@@ -337,3 +337,86 @@
   - strategic risks
   - benefits evaluation
 - Project charter
+
+### 2D: Identify Project Stakeholders
+
+- stakeholder analysis
+- stakeholder register
+- stakeholder mgmt strategy
+  - stakeholder identification
+  - stakeholder map (participation levels, interests)
+  - stakeholder analysis influence and importance
+  - stakeholder list (list of various stakeholder groups)
+  - stakeholder communication
+  - communication efficiency
+- stakeholder analysis matrix
+
+## 3: Planning the Project
+
+*Objectives*
+- Identify the elements of the project mgmt plan and subsidiary plans
+- Determine stakeholder needs
+- Create a scope statement
+
+### 3A: Identify project management plan components
+
+- project management plan
+- subsidiary plans
+  - scope mgmt plan
+  - requirements mgmt plan
+  - schedule mgmt plan
+  - cost mgmt plan
+  - quality mgmt plan
+  - process improvement plan
+  - human resource plan
+  - communications mgmt plan
+  - risk mgmt plan
+  - procurement mgmt plan
+
+### 3B: Determine stakeholder needs
+
+- project objectives
+- customer requirements
+- stakeholder requiremetns collection methods
+  - interviewing
+  - focus groups
+  - facilitated workshops
+  - group creativity techniques
+    - brainstorming
+    - nominal group technique
+    - delphi technique
+    - idea/ mind mapping
+    - affinity diagram
+  - group decision making techniques
+    - unanimity
+    - majority
+    - plurality
+    - dictatorship
+  - questionnaires and surveys
+  - observations/ job shadowing
+  - prototypes
+- requirement documentation
+- Requirements traceability matrix (RTM)
+
+### 3C Create a Scope Statement
+
+- scope statement
+  - project objectives
+  - product description
+  - project rqeuirements
+  - project deliverables
+  - project boundaries
+  - product acceptance criteria
+  - project constraints
+  - project assumptions
+
+- product analysis
+  - Functional analysis
+  - value engineering and value analysis
+  - quality function deployment
+  - systems engineering
+
+- alternative identification techniques
+  - lateral thinking
+  - brainstorming
+  - delphi technique
