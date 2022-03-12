@@ -420,3 +420,91 @@
   - lateral thinking
   - brainstorming
   - delphi technique
+
+## 4: Preparing to Develop the Project Schedule
+
+*Objectives*
+- Develop a WBS
+- Create an activity list
+- Identify the relationships b/w activities
+- Identify resources
+- Estimate time
+
+### 4A: Develop a WBS
+
+- Work Breakdown Structure (WBS)
+  - major project deliverables
+  - life cycle phases
+  - organization or functional responsibility
+  - geographical location
+- work package
+- wbs dictionary
+- decomposition
+- code of accounts
+- scope baseline
+
+### 4B: Create an activity list
+
+- Duration
+  - fixed duration
+  - elapsed time
+- Effort
+  - effort-driven
+- activities
+- 8/80 rule
+- deliverable
+- activity list
+- milestone
+- milestone list
+- entry/exit criteria
+
+### 4C: Identify the relationships between activities
+
+- activity dependency
+  - mandatory dependency
+  - discretionary dependency
+  - external dependency
+  - internal dependency
+- precedence relationship
+  - predecessor activity
+  - successor activity
+  - finish-to-start (FS)
+  - finish-to-finish (FF)
+  - start-to-start (SS)
+  - start-to-finish (SF)
+- dependency determination
+- lag
+- lead
+- project schedule network diagram
+- precedence diagramming method (PDM)
+- Summary activity
+  - Hammock Activity
+- Conditional diagramming methods
+  - loops
+  - conditaional branches
+- Graphical Evaluation Review Technique (GERT)
+
+### 4D Identify Resources
+
+- Project resources
+  - shared resource
+  - dedicated resource
+  - benched resoruce
+  - low quality resource
+- Resource calendar
+- Alternative analysis
+- published estimating data
+- project mgmt software
+- activity resource requirements
+- resource breakdown structure
+
+### 4E: Estimate time
+
+- Reserve analysis
+- Contingency reserves
+- Mgmt reserves
+- Analoguous estimating
+- top-down estimaitng
+- parametric estimating
+- three-point estimating
+- bottom-up estimating
