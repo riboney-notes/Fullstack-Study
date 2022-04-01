@@ -1,6 +1,6 @@
 # Docker
 
-Based on *Learn Docker In a Month of Lunches* Book
+Based on *Learn Docker In a Month of Lunches* Book - [link](https://www.manning.com/books/learn-docker-in-a-month-of-lunches)
 
 ## TERMINOLOGY
 
