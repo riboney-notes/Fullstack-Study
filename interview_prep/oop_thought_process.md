@@ -2,7 +2,7 @@
 
 *Book - [Link](https://www.oreilly.com/library/view/object-oriented-thought-process/9780135182130/)*
 
-## Intro to Object-Oriented Concepts
+## 1: Intro to Object-Oriented Concepts
 
 ### Fundamental Concepts
 
@@ -10,24 +10,41 @@
   - Encapsulation
   - Inheritance
   - Polymorphism
-  - Composition (*note: this one is added by the author*)
+  - Composition (*note: added by the author; the other three are the main OO concepts*)
 
-- If a language does not implement encapsualtion, inheritance, or polymorphism, then its not considered to be completely a OO langauge
+- If a language does not implement the 3 OOP concepts, then its not considered to be completely a OO langauge
 
 ### Objects and legacy systems
- 
-- Characteristics of Structured (procedural) programming 
-  - programs are divided into small programs or functions (modules)
-  - all about creating readable code and reusable components
-  - methods are written globally and code lines are processed sequentially
-  - less abstraction and flexibility than OOP
-  - more diffult to refactor
 
+- Alot of early systems were writting using the procedural programming style
+- OOP style of programming came out of the 90s with the onset of Internet based applications
+  - Transferring data via the internet was best done with OOP
 - Object wrappers
   - where you take structured code and wrap it inside an object to make it look like an object
+  - Legacy systems written in procedural style can be converted to OOP via object wrappers
 
 ### Procedural vs OO programming
-- OOP is designed around objects that consists of attributes and behaviors
-- Procedural programming is designed around functions that are separate from data which is stored into separate structures and manipulated by functions
-- Data is often global in procedural programming so access to data is uncontrolled and unpredictable
-  - Objects address this issue by combing 
+- Characteristics of OOP 
+  - Encapsulation
+    - combination of attributes and methods in the same entity
+  - Data Hiding
+    - restricting access to attributes and methods
+- Characteristics of Structured (procedural) programming 
+  - Modular
+    - programs are divided into small programs or functions 
+  - Separation of attributes and behaviors
+    - functions are stored modules or programs
+    - data is stored in data structures (arraY) and primitives
+  - Data is global
+    - access to data is uncontrolled
+
+### Conculusion
+
+- *Some sections were skipped*
+- Composition: the building of objects with other objects
+
+## 2: How To Think In Terms of Objects (p. 35)
+
+
+
+
