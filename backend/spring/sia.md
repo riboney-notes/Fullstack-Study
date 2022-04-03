@@ -45,20 +45,10 @@
 
 - Autoconfiguration
   - feature of Spring boot that reduces amount of explicit configuration needed to build an application
-
-- `@SpringBootApplication`
-  - Found in `main.java`
-  - Composite annotation that combines three annotations:
-    - `@SpringBootConfiguration`
-      - Designates the class as a configuration class
-    - `@EnableAutoConfiguration`
-      - Enables Spring Boot automatic configuration that tells Spring boot to automatically configure any components 
-    - `@ComponentScan`
-      - Allows you to declare other classes with annotations like `@Component, @Controller, @Service` to have Spring automatically discover and register them as components (beans) in the Spring application context
-
-- `run()`
-  - performs the bootstrapping of the spring application by creating the application context
-  - Parameters passed into it are a configuration class and CLI arguments
+  - Some things it does for you:
+    - configures beans in the Spring application context to enable spring MVC
+    - configures embedded tomcat server in the spring application context
+    - configures thymeleaf view resolver for rendering Spring MVC views with thymeleaf templates
 
 - Running Spring application
   - Building and running
@@ -69,3 +59,54 @@
 
   - Running tests: 
     - `./mvnw test`
+
+- Spring Boot Devtools
+  - application restart when code changes
+    - doesn't restart for changes to dependencies
+  - browser refresh when static files changes
+    - requires setting up livereload plugin for browser
+  - disables template caches
+    - by default, template engines cache the results of template parsing to avoid re-parsing for every request served which is good for production performance
+    - this is disabled in development by DevTools to allow browser refresh when changes to templates or static resources are made
+  - provides H2 console for H2 databases if in use
+    - found at `http:/ /localhost:8080/h2-console`
+  - works in any IDEs
+
+### Spring Libraries
+
+- Core Spring Framework
+  - core container
+  - dependency injection framework
+  - Spring MVC
+  - data persistance support
+  - Spring Webflux
+
+- Spring Boot
+  - Starter dependencies
+  - Autoconfiguration
+  - Actuator
+    - runtime insght, metrics, environment properties, etc
+  - Spring Boot CLI
+
+- Spring Data
+  - Extends capabilities of core Spring Framework data persistance support:
+    - Define data repositories as interfaces using naming conventions
+    - Support for different kinds of databases (nosql, graph, etc)
+
+- Spring Security
+  - Authentication
+  - Authorization
+  - API Security
+
+- Spring Integration
+  - realtime integration where data is processed as its made available
+
+- Spring Batch
+  - batched integration where data is allowed to collect for a time until some trigger signals for the batch of data to be processed
+
+- Spring Cloud
+  - microservices
+
+- Spring Native 
+  - Compilation of Spring boot projects into native executuables 
+
