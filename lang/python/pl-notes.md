@@ -13,9 +13,12 @@ _notes based on pluralsight python courses_
   - import package
   - from package import function
   - from package import function as func
+  - from words import *
+  - from words import (func_1, func_2)
 - Division
   - `/` returns floating point value
   - `//` returns integer
+- Exponentation is done with `**`
 - Scalar types
   - int
   - float
@@ -44,6 +47,18 @@ _notes based on pluralsight python courses_
 - byte literals are prefixed with lowercase `b`
 
 ### Modularity
+
+- defining functions
+  - `def funcName(): ....`
+- `__name__`
+  - specially named variable allowing to detect whether a module is run as a script or imported into another module
+  - Ex:
+  ```python
+  # if running as script, execute function
+  if __name__ == '__main__':
+    fetch_words()
+  # else import as module and don't execute
+  ```
 
 ## Core Python: Organizing Larger Programs
 
