@@ -59,6 +59,49 @@ _notes based on pluralsight python courses_
     fetch_words()
   # else import as module and don't execute
   ```
+- Good to have two blank lines between function definitions
+
+### Objects and types
+- id()
+  - returns a unique integer id for an object that is constant for the life of the object
+- python doesn't have variables that hold primitive values
+  - python's variables are named references to objects
+- value vs identity equality
+  - if p = [4,5,6] and q = [4,5,6] then
+    - p == q -> true and p is q -> false
+- values passed into functions are not copied
+  - modifying values inside functions will modify the original value
+  - python functions are pass by reference
+- function parameters can have default value like in javascript `def func(arg1, arg2='default')`
+- You can multiply a string by a number to get that many duplicates of that string
+- pyhton functions arguments don't adhere to position always
+  - you can use the same parameter name to assign values to the appropriate parameter
+- default arguments are evealuated only once when def is executed
+- better to avoid using default arguments and use immutable values and assign default in the function body
+- scopes
+  - local: inside current function
+  - enclosing: inside enclosing function
+  - global: top level of the module
+    - use `global` key word to refer to the variable in the global scope from within function
+    - We use global keyword to read and write a global variable inside a function
+  - built-in: special builtins module
+
+### Collections
+
+- tuples
+  - example = ()
+  - similiar to list except it is unchangeable
+  - allows duplicate values
+  - tuple destruction ex: `lower, upper = minmax(..)`
+    - swapping elements with destructuing: a=1, b=2; a,b = b, a; a=2, b=1
+- better to use str.join() instead of + to join strings (performance)
+  - `';'.join([...])`
+- range() allows you to generate consecutive numbers in the sepcified range
+  - not good practice to use range() and len() in for loops; use enumerate() instead
+- to get last number in list, use `-1` as the index
+  - dont use length-1
+- slicing (ex: s[1:-1]) lets you select elements within a range in an array
+  - use `s[:]` to produce a copy
 
 ## Core Python: Organizing Larger Programs
 
