@@ -111,4 +111,31 @@ _notes based on pluralsight python courses_
 
 ## Managing Python Packages and Virtual Environments
 
+- Best practices
+  - always work inside a virtual environment when working with packages
+    - lets you install packages for local projects
+  - don't use pip with sudo
+
+- `pip list`
+  - lists all currently installed pyhton packages
+
+- Virtual Environment
+  - isolated context for installing packages
+    - isolated so it won't interfere with other package installations/ configs
+
+### Setting up project with virtual environments
+
+- Create venv: `python3 -m venv venv`
+  - Activate venv: `project\Scripts\activate.bat`
+    - it works if you can see the environment name in parenthesis
+  - get out of venv: `deactivate`
+
+- Syncing dependencies with team
+  - `python -m pip freeze > requirements.txt` will take local dependencies and populate a requirments text file with it
+  - `python -m pip install -r requirements.txt`: installs dependencies listed by requirements.txt
+    - activate venv first
+- virtual enviroments should be separate from projects
+  - so they should be gitignored
+- you can separate dependencies by having different requirement files
+
 ## Best Practices for Code Quality
