@@ -289,8 +289,10 @@
 ## 2A: Identify the Project Selection Process
 
 - Strategic relevenace
+  - determines whether the project should be done (if it aligns with company's strategic goals)
 - operational relevenace
 - Project requirement
+  - statement that defines the functionality that a project is designed to accommodate and how the functionality will be achieved and satisfied by the solution
   - Business requirement (why)
   - Functional requirement (what)
   - Technical requirement (how)
