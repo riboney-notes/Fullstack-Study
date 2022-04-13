@@ -112,7 +112,7 @@
 
 - project stakeholder type that manage the core business area
 
-**Positive & negative stakeholders
+**Positive & negative stakeholders**
 
 - Ex: Postive stakeholder can be the business people who will profit and the negative stakeholder can be the environmentalist group that considers the project to be harmful
 
@@ -297,48 +297,116 @@
   - Functional requirement (what)
   - Technical requirement (how)
 - Project Selection
-- Project criteria
+  - Project criteria
+    - Quantative criteria
+    - Qualitative criteria
 - Project Selection methods
 - Project selection decision model
   - Benefit measurement models
     - Internal Rate of Return (IRR)
   - Mathematical models
 - Capital Budgeting
+  - helps senior executives make decisions about making significant investmins in capital expenditures like new equipement and facilities
+    - used if project is large or involves purchases of fixed assets
   - Payback period
   - Discounted Cash Flow (DCF)
   - Net Present Value (NPV)
-- Desision Tree
-- Criteria profiling
-- Weighted Factor
-- Q-Sorting
-- Delphi Technique
+- Scoring and rating systems
+  - used to find the best available solution
+  - Desision Tree
+  - Criteria profiling
+  - Weighted Factor
+  - Q-Sorting
+  - Delphi Technique
 - Feasiblity analysis
+  - used to evaulate if project is feasible
+  - based on expert opionion, inhouse tech capabilities, and relative historical data
 - Cultural Feasibility
+  - measures how much an organization's shared values support project's goals
+  - detects cultural issues that may affect project
+  - culture: relationship among people, processes, and platforms
+  - Ex: project involving smartphones not culturally feasible in a company whose employees don't know how to use smartphones
 - Technical feasibility
+  - requires subject matter expert to quanitify impact of new technologies involved in project
 - First-time/first use penalty
+  - the issues that arise when a project is done that has never been done before 
 - Cost-benefit analysis
+  - provides project's estimated costs alongside estimated benefits
 - Workflow analysis
-- Usecase analysis
+  - produces a flowchart that breaks down complex jobs into series of steps
+- User Experience analysis
+  - Use case analysis
+    - where you break down project requirements into user functions or use cases where each is an event or sequence of actions performed by the user
   - prototype
+    - simulated version of a new system that helps make clear aspects of a project
   - scenarios
+    - potential different situations
 
 ### 2B: Prepare a Project SOW
 
 - Statement of Work (SOW)
-  - Buesiness need
-  - High-level scope definition
-  - Strategic plan
+  - document that defines:
+    - products or services provided by project (high-level scope)
+    - the business needs a project satisfies
+    - the work that will be done during the project 
+    - Project SOWs defines Strategic plan that contains organization's goals and objectives that the project should be aligned with
+  - internal SOW
+    - referred to as Project SOW that is supplied by project sponsor in response to an organizational need
+    - provides direction and definition to a project
+    - used as reference when creating other project-related documents
+  - external SOW
+    - referred to as Procurement SOQ that is supplied to client during procurement process and could be included with a request for a proposal or as part of a contract
 
+- Project SOW preparation guidelines
+  - Provide description, high level scope (brief overview of the end result and risks), and benefits to the organization and the business need
+  - Identify the major deliverables and milestone events
+  - identify resource requirements (hardware, members, funding, etC)
+  - Identify risks
+  - Define criteria that indicates when proejct is complete
+
+- _Note: Chapter exercise includes creating a Project SOW based on a template_
 ### 2C: Create a Project Charter
 
+- The need for a project charter
+  - document that helps gain support (funding) from the organization for the project
+
 - business case
+  - document that describes and justifies the investments made for a project and explains how its within the policies of the organization
+  - links the expenditures of a project to the goal achievement of an organization
+- Components of a business case
   - business need
+    - substantiates the business reason for conducting the project
   - project contribution
+    - determines how the project contributes towards organization's objectives
   - stakeholders
+    - the bosses involved in the project, their contributions and expectations in the project
   - constraints
+    - limitations of the project
   - strategic risks
+    - possible risks and potential solutions from the mgmt side
   - benefits evaluation
+    - analysis of the key benefits from project
+  - project role
+    - project members and their jobs
+  - benefits realization plan
+    - outline of the benefits of the project
+  - contingency plan
+    - outlines alternate solutions for unplanned events
 - Project charter
+  - document that formally launches and authorizes a new project or an existing project to continue to the next phase
+    - its authorized when the project charter is signed
+ <details><summary>Project charter components</summary>
+  
+  - ![image](https://user-images.githubusercontent.com/14286113/163204332-bbcc833f-e17d-4e0c-a4a2-30989257479d.png)
+</details>
+
+<details><summary>Guidelines for creating Project charter</summary>
+  
+  ![image](https://user-images.githubusercontent.com/14286113/163205224-d85c004e-3c49-41ef-a477-a90b546b3a38.png)
+
+</details>
+
+- _Note: Chapter involves creating project charter as an exercise_
 
 ### 2D: Identify Project Stakeholders
 
