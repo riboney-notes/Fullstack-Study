@@ -410,9 +410,19 @@
 
 ### 2D: Identify Project Stakeholders
 
+- Why?
+  - important to get relevant information on stakeholder interests and expectations since they influence the outcome of the project
+
 - stakeholder analysis
+  - formal process of identifying all the stakeholders of a project and their needs, objectives, goals, issues, and impact
+  - Steps:
+    - Identify all potential stakeholders of a project
+    - Classify stakeholders based on their potential impact or support on the project
+    - Create plans for managing stakeholders reactions and responses
 - stakeholder register
+  - document that identifies stakeholders of a project
 - stakeholder mgmt strategy
+  - ensures max. support and min negative impacts of stakeholders throughout the project life cycle
   - stakeholder identification
   - stakeholder map (participation levels, interests)
   - stakeholder analysis influence and importance
@@ -420,6 +430,7 @@
   - stakeholder communication
   - communication efficiency
 - stakeholder analysis matrix
+  - describes stakeholder interestsa nd influence on project
 
 ## 3: Planning the Project
 
