@@ -29,6 +29,7 @@
     - combination of attributes and methods in the same entity
   - Data Hiding
     - restricting access to attributes and methods
+    - getters and setters
 - Characteristics of Structured (procedural) programming 
   - Modular
     - programs are divided into small programs or functions 
