@@ -430,7 +430,9 @@
   - stakeholder communication
   - communication efficiency
 - stakeholder analysis matrix
-  - describes stakeholder interestsa nd influence on project
+  - describes stakeholder interests and influence on project
+- Guidelines for identifying project stakeholders
+  - 
 
 ## 3: Planning the Project
 
