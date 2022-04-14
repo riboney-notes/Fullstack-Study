@@ -432,7 +432,20 @@
 - stakeholder analysis matrix
   - describes stakeholder interests and influence on project
 - Guidelines for identifying project stakeholders
-  - 
+  - Review these documents to identify stakeholders and stakeholder needs
+    - project charter (identifies external parties such as project sponsor, customers)
+    - procurement documents (use to identify if project involves procurement or is based on contract)
+    - company structure 
+    - company culture
+    - government & industry standards
+    - stakeholder register templates
+    - previous project historical information
+  - Identify subject matter experts who can help with identifying stakeholders
+  - Interview stakeholders to get information on them
+  - Identify key stakeholders (anyone in decision-making or management role such as project manager, sponsor, customers)
+  - Plan for stakeholder reactions and responses
+  - Create stakeholder management strategy
+- _Note_: this chapter has an activity for identifying project stakeholders
 
 ## 3: Planning the Project
 
@@ -444,46 +457,73 @@
 ### 3A: Identify project management plan components
 
 - project management plan
+  - document that details how a project will be executed to achieve its objectives
+  - Components
+    - Description of project mgmt processes and their implementation, tools, and techniques
+    - Plans for monitoring and managing changes
+    - Details on configuration mgmt
+    - Details on how project performance (scope, time, cost) will be controlled
+    - Techniques for stakeholder communications
+    - Project Life Cycle definition
+    - Plan for identifying, documenting, and addressing open issues
 - subsidiary plans
+  - whereas a project mgmt plan is general, subsidary plans are more detailed and focused
   - scope mgmt plan
   - requirements mgmt plan
   - schedule mgmt plan
   - cost mgmt plan
   - quality mgmt plan
   - process improvement plan
+    - describes the steps to identify areas of improvements in creating project deliverable
   - human resource plan
+    - document that provides guidance on how "human resources" (staff) for the project should be defined, managed, controlled, and released
   - communications mgmt plan
   - risk mgmt plan
   - procurement mgmt plan
+    - guidelines for obtaining work from outside sources (ie contracts)
 
 ### 3B: Determine stakeholder needs
 
+- important to identify stakeholder needs since if they are not in agreement about preojct expectations, timelines, costs, etc, then they will not be satisified with outcome of project
 - project objectives
+  - criteria used to measure whether a project is successful or not
+  - characterisics of project objectives:
+    - specific in terms of scope
+    - quantifiable in terms of time, cost, and quality
+    - realistic and attainable
+    - consistent with organizational plans, policies, and procedures
 - customer requirements
+  - customer needs and expectations that must be met in order to meet the project objectives
 - stakeholder requiremetns collection methods
   - interviewing
   - focus groups
+    - trained moderator-guided interactive discussions that include stakeholders and SMEs designed to gather their expectations and attitudes towards project deliverable
   - facilitated workshops
+    - group sessions that bring together stakeholders of various backgrounds to define project requirements
+    - useful for reconciling differences in viewpoints among different groups
   - group creativity techniques
-    - brainstorming
-    - nominal group technique
-    - delphi technique
-    - idea/ mind mapping
-    - affinity diagram
+    - ![image](https://user-images.githubusercontent.com/14286113/163377349-e42f8377-b8fc-40a4-abd2-5d99f4095e1e.png)    
   - group decision making techniques
-    - unanimity
-    - majority
-    - plurality
-    - dictatorship
-  - questionnaires and surveys
-  - observations/ job shadowing
-  - prototypes
+    - ![image](https://user-images.githubusercontent.com/14286113/163377469-2cd95857-0d06-4b89-9ada-2a73ea4d40db.png)
+  - Other requirement collection techniques
+    - ![image](https://user-images.githubusercontent.com/14286113/163377614-9c16f1c0-e63d-47f8-9a54-4487d216721a.png)
 - requirement documentation
+  - describes how individual requirements meet the business needs of the project
 - Requirements traceability matrix (RTM)
+  - table that links project requirements to their origin and traces them throught the project lifecycle
+  - ensures requriements are met at the end of the project and provides structure for managing changes to project scope
+  - ![image](https://user-images.githubusercontent.com/14286113/163381492-fcc27cbb-0ba2-4d2b-af81-6a6c64d1c1f6.png)
+- Guidelines for determining stakeholder needs
+  - Analyze project charter to identify project requirements and product descriptions
+  - Examine stakeholder register to identify stakeholders or can provide details for project requirements
+  - Gather project requriements via interviews, focus groups, etc
+  - Create requriement documentation that explains how requirements meets the business needs for the project
+  - Create requirements management plan
 
 ### 3C Create a Scope Statement
 
 - scope statement
+  - prevents spending time & resources on things that are not related to the project
   - project objectives
   - product description
   - project rqeuirements
