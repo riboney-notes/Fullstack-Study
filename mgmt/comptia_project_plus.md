@@ -524,25 +524,22 @@
 
 - scope statement
   - prevents spending time & resources on things that are not related to the project
-  - project objectives
-  - product description
-  - project rqeuirements
-  - project deliverables
-  - project boundaries
-  - product acceptance criteria
-  - project constraints
-  - project assumptions
+  - ![image](https://user-images.githubusercontent.com/14286113/163406453-84ec2e93-859e-43e7-8802-25c3de8d80a7.png)
+  - ![image](https://user-images.githubusercontent.com/14286113/163406527-d5e56fc6-023a-49e0-81bb-382463da9d78.png)   
+
+- Constraints
+  - interrelated limitations that concern scope, time, cost, and quality
+  - changing one constraint factor should include changing other factors to account for the impact from changing
+  - Contraints triangle: time, cost, scope = quality
 
 - product analysis
-  - Functional analysis
-  - value engineering and value analysis
-  - quality function deployment
-  - systems engineering
+  - evaluation of the project's end product and what it will take to create the project
+  - techniques
+    - ![image](https://user-images.githubusercontent.com/14286113/163408662-d74f7049-1232-4b98-80eb-16858e8907ef.png)
 
 - alternative identification techniques
-  - lateral thinking
-  - brainstorming
-  - delphi technique
+  - methods for generating as many alternative solutions and plans as possible during project planning
+  - ![image](https://user-images.githubusercontent.com/14286113/163408830-afaadee8-a8e5-4b85-b8da-02aad5d25c90.png)
 
 ## 4: Preparing to Develop the Project Schedule
 
