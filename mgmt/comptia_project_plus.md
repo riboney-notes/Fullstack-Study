@@ -552,18 +552,37 @@
 
 ### 4A: Develop a WBS
 
+- Why create a Work Breakdown Structure (WBS)?
+  - makes it easier to complete a project
+  - helps improve the accuracy of time, cost, and resource estimates by providing baseline for performance measurement and project control
 - Work Breakdown Structure (WBS)
-  - major project deliverables
-  - life cycle phases
-  - organization or functional responsibility
-  - geographical location
+  - provides logical grouping of project deliverables arranged in a hierarchical structure and defines the total scope of work required
+  - major components
+    - major project deliverables
+    - life cycle phases
+    - organization or functional responsibility
+    - geographical location
 - work package
+  - smallest, most granular deliverable that is represented on the WBS thta describes a deliverable that can be assigned to a person or group
 - wbs dictionary
+  - document that contains details about each element in the WBS
 - decomposition
+  - technique for creating WBS by subdividing project work to the work package level
 - code of accounts
+  - any system that us used for numbering the elements in a WBS that helps project managers to easily track individual WBS components
 - scope baseline
+  - describes the need, justification, requirements, and boundaries for the project
+- Guidelines to create Work Breakdown Structure
+  - Get materials:
+    - scope statement, rqeuirements documentation, WBS template, constraints, historical information
+  - Organize project work into levels of decompositions and deliverables
+  - Identify major deliverables
+  - ...
 
 ### 4B: Create an activity list
+
+- Why
+  - defining activities can mitigate project creep
 
 - Duration
   - fixed duration
