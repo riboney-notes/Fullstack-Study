@@ -258,7 +258,76 @@
 ## 13: Iterative Models
 *pg 283-303*
 
+**Iterative vs predictive**
+- shortcomings of predictive models
+  - predictive models can handle small changes, but not big changes well
+  - alot of time in predictive model is spent planning what to do
+  - predictive model require detailed requirements at the beginning of the project; otherwise, you can't plan and do task scheduling
+- iterative models address the shortcomings of predictive models by building project incrementally
+- iterative model iterations have small duration cmopared to predictive model project
+- iterative model handles fuzzy requirements by allowing to work on the knowns and handling unknowns later
 
+**Iterative vs incremental**
+- project development can be iterative and not incremental by doing work that doesn't add new features but rather improves existing ones
+- fidelty - completeness of feature
+- Describing development models via fidelty
+  - predictive - provides all features at the same time with full fidelity
+  - iterative - initially provides all features, but at low (yet usable) fidelity; later iterations provide higher and higher fidelity until its completed
+  - incremental - provides fewest possbible features to make MVP, but all features are present with full fidelty; later versions add more features at full fidelty
+  - agile - provides fewest posible features at low fidelity; later versions improve fidelity and adds new features
+
+**Prototypes**
+- simplified model that mimics the part of the application that needs to be built
+- doesn't need to work the same way as the final version nor implement all the features
+- can be used to get feedback on requirements from customers
+- horizontal prototype - demonstrates many project features, but with little depth
+- vertical prototype - provides alot of depth to only a few features
+- throwaway prototype - temporary prototype whose code is not used
+- evolutionary prototype - prototype that has new features added to it until it morphs into the fnished application
+- incremental prototype - where you a collection of prototypes are built that separately demonstrate the finished application features, eventually becoming the finished application itself
+- downfall of prototype
+  - narrowing vision - prevents identificiation of alternative solutions to a problem
+  - customer impatience - if customer sees prototype, they might think that the finished product is close to completion when it may not be
+  - raised expectation -  prototype may demonstrate features that won't be included in the application 
+
+**Spiral**
+- uses risk-driven approach to help project teams decide on what development approach to take for various parts of a project
+- phases
+  - planning phase - determine objectives of the current cycle and its alternatives and contraints
+  - risk analysis phase - determine biggest risk factors that could prvent achieving cylce's objectives
+    - resolve risks and build a prototype
+  - engineering phase - use prototype to evaluate solution
+  - evaluation phase - evaluate progress and get feedback; redo spiral dev cycle to fix whaterver problems that may remain
+  - ![image](https://user-images.githubusercontent.com/14286113/164953426-20aee90a-556d-4d5c-95b2-34374b80056b.png)
+- final trip aroudn sprial is implementing the application
+- not a series of waterfall models drawn in a spiral since spirals can be done concurrently
+- considered to be the most flexible development approache
+- can be complicated and not worth the effort for low-risk application
+- mainly good for large, high-risk projects
+
+**Unified process**
+- iterative and incremental development framework that can be customized for business/ project needs
+- four phases:
+  - inception - coming up with project idea, providing business case, identifying riks, providing general schedule and goals
+  - elaboration - project requrirements and identifying and planning for risks
+  - construction - implementation
+  - transition - deployement and maintaence
+  - prdouction - where users use the proeduct
+  - dispoal - removing application
+- can be complicated
+
+**Rational unified process**
+- uses same 4 basic phases of unified process
+- difference is the tools to make using the process easier
+  - artifact templates, document production and sharing, change request tracking, visual modeling, performance profiling, etc
+- artifact - final or intermediate result that is produced by project
+
+**Cleanroom**
+- emphasisez bug prevention
+- very test-driven
+- lots of statistical quality control and testing
+- requires math
 
 ## 14: RAD
+*pg 303 - 355
 
