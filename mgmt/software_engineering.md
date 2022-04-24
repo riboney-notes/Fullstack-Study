@@ -340,7 +340,60 @@
   - ensures project succeeds and manages risk effectively
 
 **RAD development models**
-- helps increase development speed so applications are created quickly and delivered to customers
-- 
+- helps increase development speed so applications are completed quickly and delivered to customers asap
+- one of the main principles is that requirements change often
+  - problem with non-RAD projects is that by the time project is finished, it most likely won't satisfy customer needs since reqruiements can change
+  - iterative development approaches can keep project on track, but not good enough since iteration duration is very lone
+- RAD uses iterations that are short in duration
+  - iteration is applied to the entire software development process, not just the programming part
+- features small teams, repeated testing and constant integration and short iterations
 
+**James Martin RAD**
+- Four phases
+  - requriements planning
+  - user design (ie prototyping)
+  - construction (development)
+  - cutover (deployment)
+- the user design and construction phases overlap
 
+**Agile**
+- agile is more like guidelines for software development
+  - not a methodology
+- documentation and modeling should be not excessive
+- planning is good but doesn't work in environment of changining requirements
+
+**Agile Techniques**
+
+- Self-organizing teams
+  - team that has the flexibility and authority to find its own methods for achieving its goals
+
+- communication
+  - frequent and continuous customer communication to keep project on track
+  - Usually, technical lead or project manager is the point of contact for customers and programming team
+  - many meetings for developers
+
+- incremental development
+  - agile projects are iterative and incremental
+  - iterations are short
+  - iterations incorporate every development step
+    - so iterations are like mini-projects
+
+- focus on quality
+  - development must be high quality in that there should be no bugs or major issues
+  - this is because iteration cycles are short so not much time can be spent of bug-fixing
+  - some techniques like TDD and pair programming helps achieve high quality code
+
+**Extreme Programming (XP)**
+- Pair programming
+  - where two or more programmers work on a piece of code together
+  - one is the driver and controls the keyboard and explains what they are programming
+  - the others are observers that review each line of code as its typed and makes sure the code makes sense and does what its supposeed to do
+    - also considers possible improvements and changes
+
+- XP roles
+  - customers - defines requriements, verifies application meets user needs, and provides frequent feedback to keep development on track
+  - tracker - monitors team member progress and provides useful metrics
+  - programmer - defines application architecture and writes code
+  - coach - helps team work effectively, self-organize, and use good XP practices
+  - tester - helps customer write and perform acceptance tests for use cases; looks for missing requirements and holes in design
+  - admin -  sets up an maintains team member environment and workspace
