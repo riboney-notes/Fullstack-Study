@@ -331,3 +331,16 @@
 ## 14: RAD
 *pg 303 - 355
 
+**Overview of development models other than RAD models**
+- Iterative models (ex: iterated waterfal and unified process)
+  - allows you to change project course of direction if it goes off track or if requirements change over time
+- Prototyping
+  - helps ensure application meets customer requirements
+- unified process
+  - ensures project succeeds and manages risk effectively
+
+**RAD development models**
+- helps increase development speed so applications are created quickly and delivered to customers
+- 
+
+
