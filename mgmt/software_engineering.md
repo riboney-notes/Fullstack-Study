@@ -118,6 +118,8 @@
 
 
 ## 4: Requirement Gathering
+*pg 53-87*
+- 
 
 ## 5: High-Level Design
 
@@ -397,3 +399,75 @@
   - coach - helps team work effectively, self-organize, and use good XP practices
   - tester - helps customer write and perform acceptance tests for use cases; looks for missing requirements and holes in design
   - admin -  sets up an maintains team member environment and workspace
+
+- Practices
+  - having customer on site
+  - planning
+  - standups
+  - frequent small releases
+  - simple designs
+  - deferring optimizations
+    - important to first make project work, and then worry about optimizations later
+  - refactoring only when necessary
+  - giving ownership of code
+  - using coding standards
+  - promoting generalization
+    - where everyone knows the general gist of every piece of the system
+  - pair programming
+  - constant testing
+  - continuous integration
+  - TDD
+  - intuitive domain/ metaphors (making it easier for users to understand applicaiton)
+
+**Scrum**
+- roles
+  - product owner: customres, users, and stakeholders
+    - this is where user stories come from which makes up the product backlog
+  - team member - those who build the application
+  - scrum master - ensures team follows good Scrum practices, leads meetings, removes obstacles, etc
+- scrum sprints
+  - series of timeboxed incremental iterations, typically weeks or month long
+  - result of sprint is a potentially shippable increment (PSI)
+- burndown charts are used to measure progress
+  - shows amount of work reminaing, plotted over time
+- velocity
+  - represents the amount of work team can perform during a sprint
+
+**Lean**
+- idea is to keep applications as lean as possible
+  - meaning that nohting should go into an application without a good reason
+- Principles
+  - eliminate waste
+    - unclear requiremnts (either clarify them or eliminate them)
+    - unnecessary features and code
+    - unnecessary repetition
+    - unnecessary meetings 
+  - deferring decisions until you know enough to make them intelligently
+  - deliver quickly
+  - build knowledge
+
+**Crystal**
+- family of development methodologies that feature the word crystal and project size in its name
+- _details skipped_
+
+**Feature driven development**
+- designed to work with large teams
+- focuses on application features, adding them through iteration
+- _details skipped_
+
+**Agile unified process**
+- agile version of the unified process
+- _details skipped_
+
+**Disciplined Agile Delivery**
+- aka DAD
+- people first
+- learning oriented
+- hybrid of many agile development models
+
+**Dynamic systsems development method (DSDM)
+- _details skipped_
+
+
+**Kanban**
+- _details skipped_
