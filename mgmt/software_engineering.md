@@ -119,7 +119,13 @@
 
 ## 4: Requirement Gathering
 *pg 53-87*
-- 
+
+**Requirements**
+- features that your aplication must provide
+- gathered from customers
+- guides development and helps keep things on track
+- should be clear, unambigous (define unambigous terms like "best" or "fastest"), consistent with each other (no conflicts or contradictions), verifiable (able to be determined if requirement is met or not), avoid using of imprecise adjectives
+- MOSCOW - must, should, could, wont
 
 ## 5: High-Level Design
 
