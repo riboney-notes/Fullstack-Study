@@ -122,12 +122,282 @@
 
 **Requirements**
 - features that your aplication must provide
+- used to verify finished application does what its supposed to do
 - gathered from customers
 - guides development and helps keep things on track
-- should be clear, unambigous (define unambigous terms like "best" or "fastest"), consistent with each other (no conflicts or contradictions), verifiable (able to be determined if requirement is met or not), avoid using of imprecise adjectives
-- MOSCOW - must, should, could, wont
+
+- Properties requirements should have to be useful
+  - Clear
+    - easy to understand and concise
+    - if uses technical terms, they should be defined somewhere or be common knowledge in project domain
+    - No vagueness
+      - Ex: unclear requirement: "Impve appointment scheduling"; this is too vague; Better version would be: "Reduce appointment start windows to no more than 2 hours while meeting 90% of scheduled appointments"
+  - Unambiguous
+    - Should be detailed to be able to be intrepreted no other way than the way that it is intended
+    - Ex: using terms like "best" is unambiguous since it is not clearly defined
+  - Consistent
+    - requirements should not contradict or be in conflict with each other
+    - requirements should be self-consistent in that they should be possible to achieve
+  - Prioritized
+    - MOSCOW Method
+      - M - Must; required features that must be included and are necessary for project success
+      - S - Should; important features that should be included if possible; work-arounds should be provided if needs to be deferred to the next release cycle
+      - C - Could; desirable features that can be omitted if it doesn't fit the schedule
+      - W - Won't; completely optional features that customers agree won't be included in current release
+  - Verifiable
+    -means requirements must be limited and precisely defined enough to be able to be tested and checked if application satisfies the requirement
+- Words to avoid in requirements
+  - Comparatives
+    - words that require defining quanitity, like "faster, better, etc"
+  - imprecises adjectives
+    - words like "robust, user-friendly, effiicent, etc" that may look good but are imprecise in their meaning
+  - vague commands
+    - words like "minimize, maximize, improve, etc"; they should be concrete enough to be able to determine if the requirement is met
+
+- Requirements should not be overly specific
+  - Ex: "Form will display list of toppings that will allow user to select toppings; user can check boxes to add toppings to the order"
+    - this requirement restricts developers to using checkboxes which is not ideal if there are 100s of toppings
+    - a better requirement would be: "Form will display list of toppings that will allow user to select toppings"
+  - requirement should be detailed in "what" the application should do, but not "how" it should do it
+  - requirements should be flexible
+
+### Requirement Categories
+- reqruirements can be aimed at different audiences or focus on different aspects of an application
+
+**Audience-oriented Requirements**
+- these categories focus on different audiences and different POVs that each audience has
+- uses business-oriented perspective to classify requirements
+
+- Business requirements
+  - describes project's high level goals and explain what the customer hopes to achieve with the project
+  - typically the requirements may not all be met since they could be ouitside the scope of what can be achieved through software engineering alone
+  - Ex: "Increase profits by 2.5%" or "Increase demand and gain 10k customers"; these are requirements that customer hopes to achieve but aren't really in the scope of software engineering to deliver
+
+- User requirements
+  - describes how project will be used by end users
+  - can be very detailed in explaining what application must do in different circumstances
+  - can specify what user needs to accomplish but necessarily how the application should accomplish it
+
+- functional Requirements
+  - detailed statements of project's desired capabilities
+  - similar to user requirements but includes details that users won't see directly
+    - details such as the inner workings of the application
+
+- nonfunctional requirements
+  - statements about the quality of application's behavior or constraints on how it produces a desired result
+  - Ex: if a functional requirement is "Allow users to reserve a hovercraft online", then the nonfunctional requirement would be "Application must support 20 users simultaeneously making reservations at any hour of the day"
+
+- implementation requriements
+  - temporary features that are needed to transition to using the new system but that will be later discarded
+  - Ex: database migrations
+  - can include things like hiring, buying hardware, etc
+
+**FURPS**
+- acronym for set of requirement categories: "functionality, usability, reliability, performance, and scalability"
+- functionality
+  - what the application should do
+  - describes general features and what it does
+
+- usability
+  - what the program should look like
+  - describes user-oriented features such as how it looks, ease of use, responsiveness, etc
+
+- reliability
+  - indicates the reliability and availability of the system such as how often it should be allowed to fail, when it should be available, etc
+
+- performance
+  - how efficient the system should be
+  - describes things such as speed, memory usage, disk usage, etc
+
+- supportability
+  - how easy it is to support the application
+  - includes things such as how easy it is to test the code
+
+**FURPS+**
+- enhanced version of FURPS that features extra requirement categories
+
+- Design constraints
+  - constrains on design driven by hardware and other factors
+  - ex: target hardware and platforms
+
+- implementation requirements
+  - constraints on the way the software is built
+  - ex: pair programming, coding standards, etc
+
+- interface requirements
+  - constraints on system interfaces with other systems
+  - describes data format exchanged between systems and how interactions b/w systems take place
+  - ex: using external web services
+
+- Physical requirements
+  - constraints on the hardware and physical devices the system will use
+
+
+### Common requirements
+- screens
+- menus
+- navigation - how will users navigate though different parts of the system
+- work flow
+- login
+- user types
+- audit tracking and history - keeping track of data changes
+- archiving 
+- configuration
+
+### Gathering requirements
+
+**Listening to customers and users**
+- learn about the problem and ideas on how to solve the problem from customers
+- Who
+  - who will be using the software?
+  - learn about the users of the application
+- What
+  - figure out what the customers need the application to do
+  - focus here should be on the goals rather than the solutions
+- When
+  - find out deadlines for features and final product
+  - Gantt charts and other techniques can be used to estimate the time actually needed
+- Where
+  - find out where the application will be used
+  - what will the platform be like?
+- Why
+  - find out why the application is needed
+  - this can be used to clarify customer needs and determine if the need is justified
+- How
+  - find out suggested solutions
+
+**Studying users**
+- some details might not be included in interviews with users
+- studying users as they work can give details about what they need and how they currently do things
+- allows you to find solutions that might not occur to users
+
+### Refining requirements
+- this is where you anaylize the goals and discover solutions for achieving them, creating requirements for the solutions
+- converting goals into requirements
+
+**Copying existing systems**
+- this is where you look for existing systems or processes to build requirements and understand what needs to be done
+- however, changes will not be part of the original system so it might be incompatible 
+
+**Clairvoyance**
+- this is where you use your prior experience to refine requirements
+
+**Brainstorm**
+- to innovate new solutions (not based on existing systems or prior systems), brainstorming can be used
+- useful for finding creative solutions to complex problems
+- basic approach is to gather as many ideas as possible and examine each idea to see which ones should be used
+- osborns method of brainstorming
+  - focus on quantity - get as many ideas as possible, no matter the quality
+  - withhold criticisms - early criticism can prevent new ideas from being contributed
+  - encourage unusual ideas - thinking outside of the box is key for creatviity
+  - combine and improve ideas - form new ideas by combining other ideas
+
+### Recording requirements
+- this is where you write down requirements so it can be referred to by project team
+- UML
+  - specifies how parts of the system should work, using diagrams to represent classes or behaviors
+  - can be complicated
+
+- User stories
+  - short stories that explain how the system will let user do something
+  - scope should be limited so it doesn't take too long to implement
+  - can result in ambigious descriptions
+
+- Use cases
+  - use case - description of a series of interactions between actors (actors - users or parts of the application)
+  - has larger scope than user stories, since it provides the bigger picture
+  - follows a template that features scenarios and steps
+
+- Prototypes
+  - prototype - mockup of some parts or all parts of an application
+
+- Requirements specification
+  - formal document based on a template that can describe requirements in great details
+
+### Validation and verification
+- Requirement validation
+  - process of making sure that the requirements say the right things
+  - requirements should describe the things application should do and describing everything the applciation should do
+- requirement verification
+  - process of checking that the finished applciation actually satisifies the requirements
+
 
 ## 5: High-Level Design
+*pg 87-119*
+- high-level design provides of the system at an abstract level
+- it shows how major pieces of the application will fit and interact together
+- specifies assumptions about the environment in which the application would run in
+- does not focus on details of implementation
+- helps identify and organize major parts of the system into chucnks that are self-contained enough to allow different teams to work on
+
+**Security**
+- OS security - login procedures, password expiration policies, etc)
+- application security - access control and authentiication
+- data sceurity
+- network security
+- physical security
+
+**Hardware**
+- target device
+- printers
+- network components
+- servers
+- etc
+
+**User interface**
+- high-level design of user interface that indicates navigational methods
+
+**Internal interfaces**
+- specify how pieces of the application will interact
+- allows separate teams to work together
+- defining data formats
+
+**External interfaces**
+- how application will interact with external systems
+
+**Architecture**
+- describes how pices of the application fits together at a high level
+- monolithic
+  - where a single program does everything
+  - pieces of the system are tied closely together (this is a drawbrack)
+    - not alot of flexibilty
+  - useful for small applications
+- client/server
+  - separates pieces of system that call upon other parts of the system
+- component bsed engineering
+  - collection of loosley couipled components that provide services for each other
+- service oriented architecture (SOA)
+  - simplae to component based arctecture except that the peices are implemeted as servcies
+  - service - self-contained program that runs on its own and provides some kind of service
+- data-centric 
+  - features database as the main component
+- Event driven
+  - where various parts of a system responds to events as they occur
+- Rule-based
+  - where collection of rules decide what the next steps are
+  - works if you can identify the rules necessary to get the job done
+- Distributed
+  - different parts of the applciation run on different processors and may run at the same time
+  - service oriented and multitier architectures are usually distributed
+
+**Reports**
+- data colllection and sharing
+
+**Outputs**
+- what kind of outputs the application will create
+
+**Database**
+- database design
+- audit trail
+  - keeps track of each user who modifies records
+- user access
+  - where you store privileges and access levels of users
+- mainteneance
+  - migrating old data to make more space
+  - backing up data
+
+**Configuration Data**
+
 
 ## 6: Low-level Design
 
