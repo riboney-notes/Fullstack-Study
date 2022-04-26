@@ -397,13 +397,43 @@
   - backing up data
 
 **Configuration Data**
+- settings and config menus for users to fine-tune application
+
+**Data flow and states**
+- how data is transferred among different processes
+
+**Training**
+- _details omitted_
+
+**UML**
+- _details omitted_
 
 
 ## 6: Low-level Design
 
 ## 7: Development
+*pg 143-173*
 
 ## 8: Testing
+*pg 173-203*
+- unit test
+  - verifies the correctness of a specific piece of code
+
+- integration testing
+  - verifies if multiple pieces of code correctly interacts with each other
+
+- regression testing
+  - where you test program's entire funcionality to see if anything changed or broke when new code is added
+
+- component interface testing
+  - testing that stuides interactions between components
+
+- system testing
+  - end to end run through of the whole system to check each part of the system
+
+- acceptance testing
+  - determines whether the finished application meets customer requirements
+
 
 ## 9: Deployment
 
