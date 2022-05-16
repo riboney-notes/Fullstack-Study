@@ -67,3 +67,40 @@ _[Link to course](https://www.udemy.com/course/data-structures-and-algorithms-de
   - when pointer variables are initialized using `new`, its stored in heap
   - the first memory address space of pointer variable in heap is the reference to the location in the stack
   - programmer needs to manually deallocate or release memory thats in the heap
+
+### 1-4 Types of Data Structures
+
+-  Physical data structures:
+  - Arrays (static memory, contiguous blocks)
+  - Linked List (dynamic memory, non-contiguous blocks)
+
+- Logical Data structures (implemented by physical ds)
+  - Stacks
+  - Queues
+  - Trees
+  - Graphs
+
+- Nonlinear data structures (sequential order)
+  - Trees
+  - Graphs
+
+- Linear data structures (non sequential order)
+  - arrays
+  - linked lists
+  - stacks 
+  - queues
+
+### 1-5 Linear List and Abstract Data Type
+
+- Linear list
+  - collection of ordered set of elements
+  
+- Linear List Operations
+  - traversing - accessing data elements
+  - inserting - adding data elements
+  - deleting - removing data elements
+  -
+  
+- Abstract Data Type
+  - consists of the data instances and operations
+  - operations are specified but its implemention is not described
