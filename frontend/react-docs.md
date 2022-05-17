@@ -23,7 +23,7 @@ _Notes based on the "main concepts" section in the official react [docs](https:/
 
 ## 3: Rendering Elements
 
-**React elements **
+**React elements**
 - they represent the UI
   - by way of representing DOM tags or user-defined components
 - components composed of one or many elements
