@@ -80,3 +80,9 @@ function Welcome(props){
 - similiar to props
 - private and fully controlled by the component
 - See [page](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class) for example on how to more `props` value to state and have the component re-render itself based on state change
+
+**Lifecycle methods**
+- `componentDidMount()` is a lifecylce method that runs after the component output has been rendered to the DOM
+  - used for setting up action that will potentially be removed in the future to free up resources
+- `componentWillUnmount()`
+  - used for tearing down operations to free up resources
