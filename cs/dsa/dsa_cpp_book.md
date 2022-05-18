@@ -247,12 +247,31 @@ int main()
 **Parameter passing**
 - languages like C and java do call-by-value, which means that arguments to functions are copied into function parameter
   - these leaves the original arguments to be unchanged when the function modifies its parameters that are based on the arguments
-- C++ allows you to pass parameters in different ways
+- C++ allows you to pass parameters in different ways (along with call-by-value)
   - call-by-reference
     - AKA call-by-lvalue-reference
     - ex: `void swap(double & a, double & b); // calls like swap(x,y) would affect the actual x and y variables`
   - call-by-reference-to-a-constant
-    - 
+    - AKA call-by-constant reference
+    - this is where do call-by-value except you restrict any modifications to the argument
+    - ex: `string randomItem( const vector<string> & arr); // returns a random item in arr`
+  - call-by-rvalue-reference
+    - this is where you do a `mov` instead of a copy
+    - due to the nature of rvalues being temporary, expressions such as `x=rval` where `rval` is a rvalue, are implemented using a move instead of a copy...which is more effiecient for performance
+    - ex: `string randomItem( vector<string> && arr);`
+- when to use the different types of parameter passing:
+  - Call-by-value: good for small objects that should not be altered by the function
+  - Call-by-constant: appropriate for large objects that should not be altered by the function and are expensive to copy
+  - Call-by-reference: appropriate for all objects that may be altered by the function
+
+**Return Passing**
+- return-by-value: where fucntion returns an object of an appropriate type that can be used by the caller
+  - result is usually an rvalue
+- _skipped cuz i didnt really understand it_
+
+_rest of the chapter skipped lol...ill come back to it later_
+
+## CH 2 Algorithmn Analysis
 
 
 <details><summary>placeholder, don't delete</summary>
