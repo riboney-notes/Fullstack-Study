@@ -104,3 +104,35 @@ _[Link to course](https://www.udemy.com/course/data-structures-and-algorithms-de
 - Abstract Data Type
   - consists of the data instances and operations
   - operations are specified but its implemention is not described
+
+## 2 - Essentials of C++ programming
+
+### 2-7 Understanding Classes
+
+**Access specifiers**
+- private
+  - default option
+  - not accessibile outside of the class
+- public
+  - accessible from anywhere
+- protected
+  - accessible only among class inheritance chain
+
+### 2-8 Classes and Member functions
+
+**Member function types**
+- constructors
+- destructors
+  - releases memory
+  - executes some code before an object of the class is destroyed
+- facilitators
+  - utility operations
+- accessors
+  - used to retrieve data
+- mutators
+  - used to modify data
+
+**Scope resolution operator**
+- `::`
+- used to implement member functions outside the class (interface?)
+- so if you are defining a class that implements an interface, then you use `::` to refer to the member functions of the interface when implementing that function
