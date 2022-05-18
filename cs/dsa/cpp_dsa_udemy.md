@@ -136,3 +136,48 @@ _[Link to course](https://www.udemy.com/course/data-structures-and-algorithms-de
 - `::`
 - used to implement member functions outside the class (interface?)
 - so if you are defining a class that implements an interface, then you use `::` to refer to the member functions of the interface when implementing that function
+
+### 2-11 Constructors and types of constructors
+
+**Constructor characteristics**
+- name of constructor is the same as the class name it belongs to
+- there is no return type
+- called automatically
+
+**Basic Constructor syntax**
+- ` className:: className()`
+
+**Constructor Types**
+- Default constructor
+  - provided for us by default
+  - _example skipped_
+- Parameterized constructor
+- Copy constructor
+  - provided for us by default
+  - copies contents of existing object into a new object
+  - Syntax: `classname:: classname(classname & objectToBeCopied) {...}`
+    - the `&` denotes that the argument reference (not a copy) should be used in the constructor
+
+### 2-13 Constructor initalization
+
+- There are different ways to initialize an object (parenthesis, curly brackets, etc)
+- using brackets for initalization makes it good for readiblity as you wont confuse it for function declaration like you would with paranthesis
+- _examples and details skipped!_
+
+### 2-14 Dynmaic Memory Allocation
+
+- static memory allocation occurs during compilation time
+- dynamic memory allocation is where memory is handled during run time
+
+**Dynamic memory allocation operators**
+- new
+  - used to allocate memory
+  - Ex: `int *a;` --> this allocates a variable `a` in the stack memory area
+    - `a = new int[10]` --> this creates an int array variable of size 10 in the heap memory area
+    - the base address of `a` is held by `*a`
+    - since arrays are contiguious, the subsequient memory address of `a` array elemnts are base adress + 4, 8, 12, etc
+    - since memory was allocated like this, it must be deallocated by the programmer
+- delete
+  - used to deallocate (release) memory
+  - ex: `delete []a;` --> this would destroy the array in the heap memory area and remove the pointer varaible in the stack memory area
+    - the `[]` is only required for arrays...usually `delete a` is fine
