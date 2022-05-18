@@ -79,6 +79,53 @@ git reset --hard origin/main
 git clean -f -d
 ```
 
+## Pulling PR into local workspace for review
+
+_Problem:_ Need to save your work in your own local repository and pull a pull review request to do a review of the code
+
+_Notes are based on this [article](https://bocoup.com/blog/git-workflow-walkthrough-reviewing-pull-requests-local)_
+- **NOTE**: This step is mainly for when git doesn't let you switch to another branch without first committing your changes to prevent losing your work
+  - You might not need to do this  
+- Save your work (two methods)
+  - Commit your work
+    - commits are for changes that you want to push to production eventually
+    ```bash
+    # Stage ALL changes for commit
+    git add .
+
+    # Commit your work
+    git commit -m "Description of the changes..."
+    ```
+  - Stash your work
+    - stashes are for local changes that you want to save temporarily because you need to work on another branch or for some other reason that requires you to leave the branch
+    ```bash
+    # stashes all changes
+    git stash save --all "Description of the changes..."
+
+    # view your stashes
+    git stash list
+
+    # to restore your stash and your workspace to the way it was
+    git stash pop
+    ```
+- Pull Down PR branch
+  - This is where you pull a read-only copy of the Pull Request so you can review it and run it on your computer
+  ```bash
+  # ID - numerical ID assigned to the PR; found in the PR URL or on top of the PR page
+  # BRANCHNAME - the name you want to use for the branch you are creating to review the PR
+  git fetch origin pull/ID/head:BRANCHNAME
+
+  # Switch to the newly fetched PR branch
+  git checkout BRANCHNAME
+  ```
+
+- Review Pull Request
+  - Run application to ensure it works
+  - Run any tests if available
+  - Verify Pull Request successfully solves the git issue its based on
+  - Submit your review and approve or deny the PR on github
+  - Delete PR branch and return your workspace to its original state (`git checkout ...` or `git stash pop`)
+
 ## Best Practices
 *[Reference](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide)*
 
