@@ -86,3 +86,55 @@ function Welcome(props){
   - used for setting up action that will potentially be removed in the future to free up resources
 - `componentWillUnmount()`
   - used for tearing down operations to free up resources
+
+**Using state**
+- State should not be modified directly
+  - Ex: WRONG -> `this.state.comment = 'some new comment';`
+  - State should be modified with `setState()`
+    - Ex: `this.setState({comment: 'Hello'});`
+- State updates may be asynchrounous
+  - React may batch multiple `setState()` calls into a single update for performance
+  - Because of this, `this.props` and `this.state` values should not be relied on for calculating next state since they are updated asynchrouously
+    - ex:
+    ```js
+    // Wrong
+    this.setState({
+      counter: this.state.counter + this.props.increment,
+    })
+    ```
+    - Correct way would be to pass a function into setState, ex:
+    ```js
+    // function passed into setState receives previous state as first agurment
+    //   and the props at the time the update is applied as second argument
+    this.setState(function(state,props){
+      return {
+        counter:state.counter + props.increment
+      }
+    });
+    ```
+- State updates are merged
+  - when `setState()` is called, React merges the object that is provided in the current state
+  - only provided properties are replaced; the rest are just copied over
+
+- Data flow
+  - Data flow in react is usually unidirectional from top to bottom (parent to child)
+  - data is passed down, usually not propagated upwards
+
+## 6: Handling Events
+
+**Syntaxical differences of React events and DOM events**
+- React events uses camelCase naming convention
+- Functions are passed in for event handlers, not strings
+  - Ex: 
+    - HTML -> `<button onclick="activateLasers()">...</button>` 
+    - JSX -> `<button onClick={activateLasers}>...</button>`
+
+**Preventing default form behavior**
+- In HTML, to prevent default form behavior, you return `false` in the `onsubmit` event handler method
+- In react, you have to call `event.preventDefault()` inside the event handler method
+  - NOTE: `event` object is referred to as `SyntheticEvent`; its defined according to DOM specs, but does not work exactly the same
+
+**Passing arguments to event handlers**
+- To pass extra arguments into an event handler function, this is the way you would do it:
+  - Ex: `<button onClick={ e => deleteRow(extraArg, e)}>...</button>`
+
