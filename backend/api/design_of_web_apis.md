@@ -83,3 +83,20 @@
 - Search query path example
   - GET /example?param1=value1&param2=value2
   - GET /products?free-query=something
+
+- HTTP methods overview
+  - POST
+    - Action: create or add new resource
+    - Parameters: request body
+  - GET
+    - Action: Read, retrieve, search
+    - Parameters: URL query params
+  - PATCH
+    - Action: Modify, partially update
+    - Parameters: request body
+  - PUT
+    - Action: replace or create if not existing
+    - Parameters: request body
+  - DELETE
+    - Action: remove, delete
+    - Parameters: URL query params
