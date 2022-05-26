@@ -138,3 +138,20 @@ function Welcome(props){
 - To pass extra arguments into an event handler function, this is the way you would do it:
   - Ex: `<button onClick={ e => deleteRow(extraArg, e)}>...</button>`
 
+## 7: Conditional Rendering
+
+- Example
+
+```js
+function Greeting(props) {
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn) {
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+  
+  const root = ReactDOM.createRoot(document.getElementById('root')); 
+  root.render(<Greeting isLoggedIn={false} />);
+
+}
+```
