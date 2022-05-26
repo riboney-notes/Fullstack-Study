@@ -4,7 +4,7 @@ _note to author: link to book is in kindle library_
 
 ## Ch 1 - Building Blocks
 
-**Objectives**
+**_Objectives_**
 - Handling date, time, text, numeric, and boolean values
   - primitives, wrapper classes, Math API, parentheses, type promotion, casting
 - OOP approach
