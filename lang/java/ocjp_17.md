@@ -55,3 +55,32 @@ public class MyClass {
     ```
  
 ### `main()` method
+
+- `main()` is the entry point of a java program
+  - Ex:
+  ```java
+  public class MyClass {
+    public static void main(String[] args){
+      System.out.println("Hello World!");
+      }
+    }
+  }
+  
+  // NOTE:
+  //   To compile this, `javac MyClass.java` then `java MyClass`
+  ```
+  
+ - Requirements of a `.java` file
+   - No more than one public class
+   - Filename must match the class name (case-sensitive) and must have `.java` extension
+   - If it is the entry point of the program, it must have a valid `main()` method
+
+### Package declarations and imports
+
+- statement: instruction
+- `import` statement: tell Java which packages to look in for classes
+- Wildcard import is a shortcut that imports all the classes in a package
+  - Ex: `import java.util.* // imports all classes in the util package`
+  - it doesn't import child packages, fields, or methods...only imports classes directly under the package in the import statement
+- `java.lang` package is a special pacakge that is always automatically imported
+- Don't need to import a class if it is in the same package
