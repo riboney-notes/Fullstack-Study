@@ -84,3 +84,19 @@ public class MyClass {
   - it doesn't import child packages, fields, or methods...only imports classes directly under the package in the import statement
 - `java.lang` package is a special pacakge that is always automatically imported
 - Don't need to import a class if it is in the same package
+- Using packages prevents naming conflicts
+  - However, when using wildcard imports, you can have a naming conflict
+  - When class name is found in multiple packages, Java gives you compiler error
+  - Ex:
+  ```java
+  // for Date class:
+  import java.util.*;
+  import java.sql.*; // compilation error
+  ```
+  - To fix this, explicitly import the class name and any subsequent wildcard import naming conflicts won't cause errors
+    - however, if you explciltly import two packages with the same class name, then you will have error
+      - this can be solved by qualifying the class name with fully qualified class name (ex: package.class.subclass) in the code
+
+- default package
+  - special unnamed package whose classes won't have any package name
+  - usually, this should be avoided to prevent naming conflicts and allow for code reuse
