@@ -573,29 +573,38 @@
 - scope baseline
   - describes the need, justification, requirements, and boundaries for the project
 - Guidelines to create Work Breakdown Structure
-  - Get materials:
-    - scope statement, rqeuirements documentation, WBS template, constraints, historical information
-  - Organize project work into levels of decompositions and deliverables
-  - Identify major deliverables
-  - ...
+  - _skipped..._
 
 ### 4B: Create an activity list
 
 - Why
   - defining activities can mitigate project creep
-
+  - helps ensure that all project activities remain within the project scope
 - Duration
-  - fixed duration
-  - elapsed time
+  - amount of time that a particular task or work package will take to complete
+  - _fixed duration_ - describes task/work package that requires a set amount of time; not affected by application of additional resources
+  - _elapsed time_ - actual calendar time required for an activity from start to finish (ex: if activity takes 2 weeks to complete, then elapsed time may be 4 weeks if there is a 2 week shutdown)
 - Effort
-  - effort-driven
-- activities
+  - measure of labor that must be applied to the completion of a particular task or work package; expressed as resources * time (Ex: person-hours, person-days, etc) 
+  - _effort-driven_ - describes a task where the effort/ work remains fixed regardless of the number of resources used to complete the work (?); more labor resources, more quickly task can be completed
 - 8/80 rule
-- deliverable
+  - general guideline regarding work packages that they require more than 8 and fewer than 80 hours of effort to be completed
+  - used to identify which work components should be considered to be work packages 
+- activity
+  - smaller, manageable, and executable components broken down/subdivided from work packages that requires action to produce a deliverable 
+  - lays foundation for estimating, scheduling, executing, and monitoring, and controlling the project work
+  - has expected duration
+  - consumes budgets and human resources
 - activity list
+  - definitive lists of activities that must be completed to produce the desired project deliverables
+  - used to create the project schedule 
 - milestone
+  - control point event in a project with zero duration that triggers a reporting requirement or requires sponsor/customer approval before proceeding with the project 
 - milestone list
+  - document that contains the project milestones and inidcates if achieving the milestone is mandatory or optional for the project to move to the next phase
+  - used as indicators of a project's progress and the goals that must be reached 
 - entry/exit criteria
+  - conditions that are required to enter into or exit from a particular milestone 
 
 ### 4C: Identify the relationships between activities
 
