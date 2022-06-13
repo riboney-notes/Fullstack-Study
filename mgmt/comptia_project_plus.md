@@ -608,6 +608,10 @@
 
 ### 4C: Identify the relationships between activities
 
+- What?
+  - once activity list for project is created, a project schedule network diagram can be created
+    - this helps you understand the sequence in which project work must occur 
+    - helps avoid unnecessary work and expense 
 - activity dependency
   - mandatory dependency
   - discretionary dependency
