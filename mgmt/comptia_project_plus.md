@@ -613,50 +613,146 @@
     - this helps you understand the sequence in which project work must occur 
     - helps avoid unnecessary work and expense 
 - activity dependency
+  - logical relationship that exists between two project activities
+  - indicates whether the start of an activity is contingent upon an event or input form
+  - shapes the sequence among project activities
+- activity dependency types
   - mandatory dependency
+    - inherent to the work itself; usually affected by physical constraints
+    - aka "hard logic"
+    - ex: Books can't be bound before they are printed 
   - discretionary dependency
+    - defined by the project and the project management team at their discretion
+    - Ex: sponsor would like to see the book's cover design ASAP so book cover artwork would be placed before inside illustrations in the sequence
   - external dependency
+    - contingent on inputs from outside the project activities
+    - can be mandatory or discretionary
+    - Ex:  book can't be printed until shipment of paper arrives
   - internal dependency
+    - contingent on inputs from within the organization
+    - can be mandatory or discretionary 
 - precedence relationship
-  - predecessor activity
-  - successor activity
-  - finish-to-start (FS)
-  - finish-to-finish (FF)
-  - start-to-start (SS)
-  - start-to-finish (SF)
+  - logical relationship between two activities that describes the sequence in which the activities should be carried out 
+  - predecessor activity - start
+  - successor activity - end
 - dependency determination
+  - identification of the dependencies of one activity over the otehr
+  - involves establishing the precedence relationships among activities and creating logical sequences
+- Precedence relationship types
+  - finish-to-start (FS)
+    - where the predecessor activity (A) must finish before the sucessor activity can start (B)
+    - Time = A + B 
+  - finish-to-finish (FF)
+    -  where the predecessor activity must finish before the successor activity can finish
+    -  Time = based on when B begins
+    -  Ex: construction (A) must be finished before the building inspection (B) can be finished
+  - start-to-start (SS)
+    - where the predecessor activity must start before the successor activity can start 
+    - Time = based on latest finish time of A or B
+    - Ex: Building design (A) must start before Electrical layout design (B) can start
+  - start-to-finish (SF)
+    - where the predecessor activity must start before the successor activity can finish  
+    - Successor activity begins before the predecessor activity
+    - Time = A + B
+    - Ex: electrical inspections (A) must start before drywalling is finished (B)
 - lag
+  - delay in the start of a successor activity
+  - can be intentional and required
+  - determined by external or mandatory dependency  
+  - Increases elapsed time for activities
 - lead
+  - change in logical relationship that allows the successor activity to start before the predecessor activity ends in an FS relationship
+  - implemented when successor activity needs to be accelerated in order to shorten project schedule
+  - negative lag
+  - risk of rework
+  - Ex: programming web page before design is completed 
 - project schedule network diagram
+  - graphical representation of the sequence of project activities and the dependencies among them
 - precedence diagramming method (PDM)
+  - project schedule network diagramming method that uses rectangular boxes or nodes to represent activities and arrows to represent precedence relationships between activities 
 - Summary activity
-  - Hammock Activity
+  - group of related activities that is shown as a single aggregate activity in a bar chart or graph, for reporting purposes 
+  - aka Hammock Activity
 - Conditional diagramming methods
+  - any network diagramming method that allows for non-sequential activities such as loops or conditional branches 
   - loops
-  - conditaional branches
+    - activity sequences that must be revisisted or repeated 
+  - conditional branches
+    - activities that will be implemented only under specific conditions 
+    - Ex: GERT model
 - Graphical Evaluation Review Technique (GERT)
 
 ### 4D Identify Resources
 
+- Why?
+  - identifying resources will prevent costly mistakes and misunderstandings 
 - Project resources
+  - any useful materials or people needed to complete the project work
+  - Ex: labor, materials, facilities, equipment, consultants, services, supplies, or utilities
+  - limited in quantity and require thoughtful allocation
+- Project resource types 
   - shared resource
+    - resources that are used for multiple projects and must be managed as such 
   - dedicated resource
-  - benched resoruce
+    - resources that have been committed for your project's use
+  - benched resource
+    - skilled resources that are retained during downtime but are not incurring costs and can be put into service immediately
   - low quality resource
+    - resources that do not possess specialized skills or qualities 
 - Resource calendar
+  - calendar that lists the time during which project resources can participate in the project tasks
+  - prevents resource scheduling conflicts 
 - Alternative analysis
+  - process of examining different methods of accomplishing activities and determining a preferred method    
 - published estimating data
+  - information found in commercial publications about production rates, resource cost, and labor requirements
+  - can be used to determine resources and resource costs 
 - project mgmt software
+  - application that generates and organizes resource information, such as cost estimates, work breakdown structures, and project schedules, and so on
+  - Ex: Jira, Smartsheet, LiquidPLanner, Microsoft Project, Primavera 
 - activity resource requirements
+  - descriptions of resources and quantities of resources necessary to complete project activities
+  - progressively elaborated when developing human resource plan 
 - resource breakdown structure
+  - hierarchy of identified resources, organized by category and type
+    - category includes labor and equipment
+    - type includes skills and grad elevels
+  - helps organize and report project schedule information along with the resource utilization data
 
 ### 4E: Estimate time
 
+- Why?
+  - inaccurate time estimates affects the schedule and prevent overtime work 
 - Reserve analysis
+  - process of identifying and adding extra time that will serve as contingency or management reserves to the duration estimates   
 - Contingency reserves
+  - serves as buffers in recognition of scheduled risks or setbacks
+  - determined by project manager 
 - Mgmt reserves
+  - buffers added to the project for unforeseen changes to project scope and costs
+  - determined by sponsor 
 - Analoguous estimating
-- top-down estimaitng
+  - estimating technique in which managers use their experience, historical information from similiar projects, and expert jugdement to determine the total project cost or time estimate 
+  - aka top-down estimaitng
+  - used when 
+    - limited amount of detailed information about project is available
+    - similiar project for comparison exists
+    - those preparing estimates have the requisite expertise
 - parametric estimating
+  - technique that is used to predict duration or cost by using historical data in a mathematical model
+  - Ex: if it takes 5 hours to create 5 webpages, then it will take 10 hours (5 * 2) to create 10 webpages 
 - three-point estimating
+  - method of activity duration estimating in which three types of estimates are incorporated into a singular duration estimate scenario:
+    - optimistic
+      - best-case estimate of the time required to complete the specified work 
+    - most likely
+      - time required to complete teh work under normal conditions 
+    - pessimistic
+      - worst case estimate or the time required if unforseen delays occur
+  - Formula: (optimistic + 4(most likely) + pessimistic)/ 6   
 - bottom-up estimating
+  - method of estimating the duration or cost of each work package in the WBS
+  - used when
+    - more detail is available about work packages
+    - more accurate time estimates are needed
+    - time for making estimates is available   
