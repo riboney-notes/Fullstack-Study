@@ -96,3 +96,9 @@ _Link to [course](https://www.udemy.com/course/master-the-coding-interview-data-
   - Ex: O(a X b) for operations that are nested 
 - Drop non dominants
   - when runtime complexity is a function with many terms, only keep the leading term with the highest degree 
+
+**Space complexity causes**
+- variables
+- data structures
+- function calls
+- allocations
