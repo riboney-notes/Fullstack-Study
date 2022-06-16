@@ -755,4 +755,36 @@
   - used when
     - more detail is available about work packages
     - more accurate time estimates are needed
-    - time for making estimates is available   
+    - time for making estimates is available
+
+## 5: Developing the Project Schedule
+
+**Objectives**
+- Develop a project schedule
+- Identify the critical path
+- Optimize the project schedule
+- Create a schedule baseline
+
+### 5A: Develop a Project Schedule
+
+**Why?**
+- Project schedules are one of the most important tools for keeping upper management and project stakeholders informed about the project's status and for tracking performance
+
+**Project Schedule**
+- project team's plan for starting and finishing activities on specific dates and in a certain sequence
+- specifies planned dates for meeting project milestones
+- purpose is to coordinate activities to form a master plan in order to complete project objectives on time
+
+**Critical path**
+- network path that has the longest duration
+- activities on critical path cannot be delayed
+  - else, the while project will be delayed
+
+**Float**
+- amount of time an activity can be delayed from its Early Start without delaying the project finish date or consecutive activities
+- Only occurs in activities that are not on the critical path
+- aka Slack
+
+**Schedule diagramming notations for an activity**
+- Early start (ES)
+  - 
