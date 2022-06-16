@@ -102,3 +102,42 @@ _Link to [course](https://www.udemy.com/course/master-the-coding-interview-data-
 - data structures
 - function calls
 - allocations
+
+## 4 - How to Solve Problems
+
+**What companies look for**
+- Analytic skills
+- Coding skills
+- Tehcnical skills
+- Communication skills
+
+**DSA to know to solve most coding problems**
+- Data structures
+  - Arrays
+  - Trees
+  - Stacks
+  - Tries
+  - Queues
+  - Graphs
+  - Linked Lists
+  - Hash Tables
+- Algorithms
+  - Sorting
+  - Dynamic Programming
+  - BFS + DFS (searching)
+  - Recursion
+
+**Whiteboard interview tips**
+- Ask questions to clarify problem
+  - input 
+  - output
+  - goal (time? space?)
+  - contraints (how big the array will get, limitations, etc)
+- Start with brute force approach
+  - Explain the approach and why its bad/ not ideal 
+  - this is so you have the chance to show critical thinking skills
+- Verbally think out loud so they can see your thought process
+  - can write these as comments in the code body before code is implemented 
+- Consider edge cases and bring it up in your code
+- Test your code
+- Ask for feedback
