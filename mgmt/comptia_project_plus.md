@@ -787,4 +787,29 @@
 
 **Schedule diagramming notations for an activity**
 - Early start (ES)
-  - 
+  - earliest time an acitvity can start
+  - ES of the first activity in a network diagram is 0
+  - ES of all other activities is the latest EF of any predecessor activities
+- Early Finish (EF)
+  - earliest time an activity can finish
+  - EF for the first activity is the same as its duration
+  - For all other activities, EF is the lastest EF of all predecessor activities of an activity + duration
+- Late Finish (LF)
+  - latest time an activity can finish
+- Late start (LS)
+  - latest time an activity can start
+- Duration (DU)
+  - number of work periods required for the completion of an activity 
+
+**Total Float**
+- type of float where the total amount of time an activity requires can be delayed without delaying the project finish date
+- Total Float = LF-EF (or LS-ES)
+- Total float for every activity on the critical path is 0
+
+**Free float**
+- amount of time an activity can be delayed without delaying the ES of any activity that immediately folllows it
+- it allows flexibility of the start or finish time within that activity only
+
+**Schedule network analysis**
+- technique that is used to calculate the theoretical early and late start and finish dates for all project activities
+- helps create project schedule
