@@ -778,7 +778,7 @@
 **Critical path**
 - network path that has the longest duration
 - activities on critical path cannot be delayed
-  - else, the while project will be delayed
+  - else, the whole project will be delayed
 
 **Float**
 - amount of time an activity can be delayed from its Early Start without delaying the project finish date or consecutive activities
@@ -813,3 +813,43 @@
 **Schedule network analysis**
 - technique that is used to calculate the theoretical early and late start and finish dates for all project activities
 - helps create project schedule
+
+
+### 5B: Identify the critical path
+
+**Why?**
+- Identifying critical path hellps you to determine duration of the entire project
+- Also helps with determining which activities have scheduling flexibility before you complete project schedule
+
+**Critical activities**
+- activities on the critical path
+- For all critical activities, ES = LS and EF = LF
+  - no flexibility in start or finish times
+  - total float is zero 
+
+### 5C: Optimize Project Schedule
+
+**Why?**
+- Allows you to address setbacks, delays, constraints, etc
+- requires using project management tools
+
+**Scheduling compression**
+- shortening of the project schedule without affecting the project scope
+- alleviates the pressure of completing too many activities in one of two ways: fast-tracking & crashing
+
+**Fast-tracking**
+- process of compressing the project duration by performing some activities concurrently that were originally scheduled sequentially
+- involves identifying FS relationships that could be done in parallel, either as FF, SF, or SS relationships or by adding some leads to FS activities
+
+**Crashing**
+- schedule compression method that analyzes cost and schedule trade-offs to determine how to obtain the greatest schedule compression for the least incremental cost
+- involves allocating more resources to activities on the critical path in an effort to shorten their duration, thereby increasing project costs
+
+**Crash cost plotting methods**
+- techniques for analyzing the crash costs by creating a graph or a visual representation that clearly illustrates those costs
+
+**Delaying**
+- project scheduling process where activities are postponed to accommodate the availability of resources
+- delaying resource: the first resource on an activity that allows the activity to be delayed 
+
+### 5D: Create a schedule baseline
