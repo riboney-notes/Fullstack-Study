@@ -853,3 +853,7 @@
 - delaying resource: the first resource on an activity that allows the activity to be delayed 
 
 ### 5D: Create a schedule baseline
+
+**Why?**
+- Schedule baseline is used to get approval for project schedule
+-  
