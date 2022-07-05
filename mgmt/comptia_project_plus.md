@@ -856,4 +856,28 @@
 
 **Why?**
 - Schedule baseline is used to get approval for project schedule
--  
+
+**schedule baseline**
+- management approved version of the proejct schedule
+- drawn from the schedule network analysis and includes baseline start and finish dates
+- provides basis for measuring and reporting schedule performance
+
+## 6: Planning Project Costs
+
+**Objectives**
+- Estimate project costs
+- Estimate cost baseline
+- Reconcile funding and costs
+
+### 6A: Estimate Project Costs
+
+**Why?**
+
+### 6B: Estimate cost baseline
+
+**Why?**
+
+
+### 6C: Reconcile funding and costs
+
+**Why?**
