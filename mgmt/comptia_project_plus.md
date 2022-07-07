@@ -872,6 +872,34 @@
 ### 6A: Estimate Project Costs
 
 **Why?**
+- Estimating project costs can help control project costs
+- Can prevent wasting resources on unfeasible projects that are too costly
+
+
+**Rough Order of Magnititude (ROM)**
+- developed w/o any etailed base data and often based on high-level historic data, expert judgment, or costing modely
+- made early in the project
+- _Accuracy_: -25% to 75%
+
+**Range of estimate**
+- alternative to ROM when accuracy of the estimate is not well known
+- _Accuracy_: +-35%
+
+**Approx. Estimate**
+- based on more information than ROM
+- _Accuracy_: +-15%
+
+**Budgetary Estimate**
+- Used for appropriation purposes
+
+**Definitive (control or detailed) estimate**
+- based on detailed information
+- developed by estimated the cost for each work package in WBS
+
+**Phased (rolling wave or moving window) estimate**
+- Allows the use o fROM or approximate estimates for later parts of work, while work that must be done earlier in the project life cycle is estimated at the definitive level
+
+
 
 ### 6B: Estimate cost baseline
 
