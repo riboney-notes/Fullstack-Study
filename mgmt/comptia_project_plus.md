@@ -897,15 +897,170 @@
 - developed by estimated the cost for each work package in WBS
 
 **Phased (rolling wave or moving window) estimate**
-- Allows the use o fROM or approximate estimates for later parts of work, while work that must be done earlier in the project life cycle is estimated at the definitive level
-
-
+- Allows the use of ROM or approximate estimates for later parts of work, while work that must be done earlier in the project life cycle is estimated at the definitive level
 
 ### 6B: Estimate cost baseline
 
 **Why?**
+- Allows you to track project costs, setup the cash flow for the project, and measure cost
 
+**cost baseline**
+- time-phased budget that will monitor and measure cost performance throughout the project life cycle
+- developed by adding estimated costs of project components by period
+
+**cost aggregation**
+- technique that is used to calculate the cost of a whole component by finding the aggregate cost of the constituent parts of the whole component
+- so activity costs are combined into work package costs, which are aggregated up the WBS until a single project cost is produced
+- can be used to determine the total cost of the project
+
+**contingency allowances**
+- additional funds that are somtimes built into cost estimates to allow for unanticipated events
+- ensures ability to manage unforeseen costs and events
+
+**cost assignment methods**
+- 50/50 percent rule
+  - 50% credit is given when the activity begins and the remaining 50% credit is given when the work is completed
+  - Ex: if activity is budgeted to cost $3k, then 1.5k is given when work begins adn teh other 1.5k is given when the work is complete
+- percentage complete rule
+  - completion percentatges are estimated and assessed at specified reporting intervals
+  - most commonly used and accurate
+- weighted milestone
+  - total work package value is divided up and assigned to milestone intervals within the work package
+    - each milestone carries a budgeted value which is earned when the milestone is achieved
+  - works well for long work packages with multiple activities
 
 ### 6C: Reconcile funding and costs
 
 **Why?**
+- its important to determine no discrepancy between the funding committed and the costs of the work to be done, to ensure prject stays on track
+
+**funding limit reconcillation**
+- method of adjusting, spending, scheduling, and allocating resources in order to bring expenditures into alignment with budgetary constraints
+
+## 7 Planning human resources and quality management
+
+**Objectives**
+- Create a human resource plan
+- Create a quality management plan
+
+### 7A: Create a human resource plan
+
+**Why**
+- Affects success of project
+
+**Project interfaces**
+- various reporting relationships that occur internally or externally to a project
+- organizational
+  - reporting relationships among different organizational units such as project team, upper maangement, etc
+- technical
+  - reporting relationships among technical disciplines on the project that occur during a phase or during the transition between phases
+- interpersonal
+  - reporting relationships among individuals working on the project
+- logistical
+  - reporting relationships between project team members who are distributed accorss different buildings, countries, and time zones
+- political
+  - reporting relationships inside an organization among different interest groups
+
+**Responsibility Assignment Matrix (RAM)**
+- chart that links key project stakeholders to specific project deliverables or activities by assigning responsibilities to each stakeholder for each element of work
+
+**RACI chart**
+- type of RAM that helps depict level of responsibility for each project team member
+- Stands for "Responsibile, Accountable, Consulted, and Informed"
+
+**(sense of ) Ownership**
+- refers to a condition where everone in the project claims to understand the assigned roles and responsiblities
+
+**Networking**
+- technique used during human resource planning that helps build exxceling rapport with functional managers and other stakeholders
+
+**Staffing management plans**
+- part of the HR plan that forecasts what types of staff will work on a project, when they will be needed, how they will be recruited, and when they will be released from the project
+
+### 7B: Create a quality management plan
+
+**Why**
+- Poor quality management is major cause of project failure
+
+**Quality**
+- totality of features and characteristics of a product or service that bears on its ability to satisfy stated or implied needs
+- it is the degree to which the characteristics of a project fulfills its requirements
+- represents what the stakeholders expect from the project
+
+**Quality process (3 stages)**
+- quality planning
+  - identifying the standards which apply to the project and deciding how to meet these standards
+- quality assurance
+  - evaluating overall project quality regularly and systematically during the execution process so that all stakeholders have confidence that the project will meet the identified quality standards
+- quality control
+  - evaluating specific quality results against quality standards and identifying ways to improve quality and eliminate cuases of unstaisforactory quality
+
+**Variables affecting quality**
+- cost associated with a particular problem
+- time loss associated with a particular problem
+- poor design
+- etc
+
+**Total quality management (TQM)**
+- apprach to improve business results through an emphasis on customer satisfication, employee development, and processes rather than on functions
+
+**Standards**
+- voluntary guidelines or characteristices that have been approved by a recognized body of experts such as ISO
+- de facto best practices
+  - can become de jure regulations
+
+**regulations**
+- compliance-mandatory characteristics for specific products, services, or processes
+
+
+**ISO 9000 series**
+- quality system standard that is applicable to any product, service, or processs in the world
+
+**Cost of quality**
+- refers to the total cost of effort needed to achieve an acceptable level of quality in the project's product or service
+
+**prevention costs**
+- upfront costs of programs or processes needed to meet customer requirements or design in quality
+- ex: design plans, quality plans, training, etc
+
+**Appraisal costs**
+- costs associated with evaluating whether the programs or processes meet requirements
+- ex: inspections, testing, design reviews, etc
+
+**Internal failure costs**
+- costs associated with making the product or service acceptable to the customer after it fails internal testing and before it is delivered to the customer
+- ex: rework or repair, defect evaluation, etc
+
+**external failure costs**
+- costs due to rejection of the product or service by the customer
+- ex: product returns, liabilities, etc
+
+**checklists**
+- job aid that prompts employees to perform activities according to a consistent quality standard
+
+**flowchart**
+- diagram that shows relationships of various elements in a system or process
+- can assist in identifying potential quality problems and possible effects of those problems
+
+**process flowchart**
+- shows the sequence of events and the flow of inputs and outputs between elements in a process or system
+
+**cause and effect diagram**
+- provides a structured method to identify and analyze potential causes of problems in a process or system
+
+**Control charts**
+- graphs that are used to analyze and communicate the variablity of a process or project activity over time
+
+**benchmarking**
+- addresses the evaluation of a groups business or project practices in comparison to those of other groups
+- it is used to identify the best practices in order to meet or exceed them
+
+**design of experiments (DOE)**
+- technique that is used to systematically identify varying levels of independent variables
+- can determine which variable has greatest effect, what is the relationship between each variable and quality specifications, etc
+
+**quality metrics**
+- actual value that describes the measurements for the quality control process
+
+**process improvement planning**
+- process of analyzing and identifying areas of improvement in project processes and enumerating an action plan based on the project goals and identified issues
