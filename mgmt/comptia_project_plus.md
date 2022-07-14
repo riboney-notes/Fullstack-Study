@@ -1064,3 +1064,86 @@
 
 **process improvement planning**
 - process of analyzing and identifying areas of improvement in project processes and enumerating an action plan based on the project goals and identified issues
+
+## 8 Communicating during the project
+
+**Objectives**
+- Identify communication methods and factors that influence it
+- Create a communications management plan
+
+### 8A: Identify Communication Methods
+
+**Why**
+- Good to know which methods are available and when they are suitable for use
+
+**Communication methods**
+- techniques that are used to share and manage information among stakeholders in a project
+- three types:
+  - interactive
+  - push
+  - pull
+
+**interactive communication**
+- involves communication between multiple people performing multi-directional information exchange
+
+**push communication**
+- involves sending information to a receiver
+- ensures that the information has been distributed
+  - doesn't ensure communication was seen by receiver
+
+**pull communication**
+- involves receivers accessing information whenever required
+
+**communication types**
+- face-to-face meetings
+- video and voice conferencing
+- email
+- fax
+- IM-instant messaging
+- text messaging
+- printed media and documents
+- social media
+- company website
+
+**communication model**
+- determines how information must flow from the sender to the receiver
+- major components
+  -  sender
+  -  receiver
+  -  message
+
+**communication technology**
+- any type of technology that is used for communicating information
+
+**communication method considerations**
+- language barriers
+- geographical factors
+- technological resources
+- cultural factors
+- inter-organizational procedures
+- intraorganizational procedures
+- personal preferences
+- rapport/ relationship building (ex: phone calls better than mass email for developing mass email)
+- message content
+- crticicality
+- stakeholder requirements
+
+### 8B Create a communications management plan
+
+**why**
+- Create a communication mangaement plan to ensure effective communication
+  - effective communication is where the right people receive the right information in the most appropriate format at the right time with the right amount of detail
+
+
+**Communication management plan - who,what,when,how**
+- who: audience
+- what: types of information audience will receive
+- when: frequency of communication
+- how: technology and communication method
+
+**Communication requirements**
+- project stakeholders documented communication needs
+- includes relveant information that onctributes to the sucess of a project and analysis of cost, time, and logistics
+
+**Communication requirements analysis**
+- investigation that leads to a clear articulartion of the sktaheolders communication needs and helps the project manager make effective chocices regarding the technologies to be recommended in the communications managmeent plan
