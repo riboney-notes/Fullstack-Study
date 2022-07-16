@@ -1134,7 +1134,6 @@
 - Create a communication mangaement plan to ensure effective communication
   - effective communication is where the right people receive the right information in the most appropriate format at the right time with the right amount of detail
 
-
 **Communication management plan - who,what,when,how**
 - who: audience
 - what: types of information audience will receive
@@ -1147,3 +1146,263 @@
 
 **Communication requirements analysis**
 - investigation that leads to a clear articulartion of the sktaheolders communication needs and helps the project manager make effective chocices regarding the technologies to be recommended in the communications managmeent plan
+
+## 9 Planning for Risk
+
+**Objectives**
+- Creat risk management plan
+- Identify project risks and triggers
+- Perform qualitative risk analysis
+- Perform quantitative risk analysis
+- Develop risk response plan
+
+### 9A Risk mananagement plan
+
+**why**
+- deciding how to apprach and plan for project risks early in the planning phase can help maximize opportunities in positive risks and minimize consequences of adverse risks that may occur during the life of project
+
+**Risk**
+- uncertain event that may have either a positive or negative effect on the project
+- can effect time, cost, quality, and scope
+
+**Negative Risk**
+- risks that have negative impact on the project
+- AKA threats
+- targeted by managers to prevent from occuring or reduce their impact
+
+**Positive risks**
+- risks that when taken, produce a postive project outcome
+- AKA opportunities
+
+**Effective-based risk classification**
+- method of analyzing the way that risks to a project could impact its success
+- chosen for complex projects in which many of the risk factors are interrelated
+
+**Source-based risk classification**
+- method of analyzing risk in terms of its origins
+- sources may be internal or external to the project and technical, nontechnical, industry-specific, or generic
+
+**Business risk**
+- risk that is inherent in a business endeavor that may produce some positive outcome
+- competitive risks
+  - risk of increased competition in the marketplace and a rival company developing a superior product
+- legislative risks
+  - risk of new laws or regulation that will require your company to spend more money to remain in compliance with
+- monetary risks
+  - risk of increased prices for raw materials, taxes, operating costs, and losses from nonpayment from customers
+- operational risks
+  - risk of fraud, theft, injury, accidents, and damages   
+
+**Insurable risk**
+- risk that has only the potential for loss and no potential for profit or gain
+- insurance may be purchased to reduce or offset possible loss
+- direct property 
+  - risk of property damage due to weather, fire, and so on
+- indirect property
+  - risk of additional expenditures needed to recover from property loss
+- liability
+  - risk of needing to make good after casing damage to another
+- personnel-related
+  - liability risk for damage to employees
+
+**probability scales**
+- graph showing the assignement of value to the likelihood of a risk occuring
+- can range from 0.0 (no probability) to 1.0 (certaintity)
+
+**sum of probabilities**
+- the sum of the probabilities of all possible events must be equal to 1 (100%)
+
+**probability of a single event**
+- the probability of any single event must be greater than or equal to 0 and less than or equal to 1
+
+**Mean**
+- the sum of the events divided by the number of occurrences
+
+**Median**
+- the number that separates the higher half of a probability distribution from the lower half
+
+**standard deviation**
+- measure of the spread of data
+
+**probability distribution**
+- scattering of values assigned to likelihood in a sample population
+- visually depicted in the form of a Probability Density Function (PDF) in which the vertical axis refers to the probability of a particular value that is depcted on the horizontal axis
+  - the zero on horizontal axis represents the mean and values to the right and left represent standard deviations from the mean
+
+**Normal distribution PDF**
+- results when there is symmertical range or variation in the probabilities of each outcome
+- looks like shape of a bell with a single peak (bell curve)
+  - peak = mean
+  - symmetry indicates equal number of occurrences above and below the mean
+
+**Triangular Distribution PDF**
+- results when there is an asymmetrical distribution of probabilities
+- the data is skewed to one side, indidicating that an activity or element presents relatively little risk to project
+
+**Subjective probability**
+- based on people's opinions, which may be shaped by information, experience, and attitude
+- can vary alot from person to person
+
+**Objective probability**
+- probability that is deduced mathematically
+
+**impact scale**
+- rating system of values that reflect the magnitidude of the impact of a risk event on project objectives
+- ratings have value to represent the magnititude
+
+**Levels of uncertainty**
+- describes the risks of project based on how much is known about the source and effect of the risk
+- known
+  - items that you know could affect you, and for which you can roughly predict the nature and extent of the effect
+- known-unknown
+  - items that ou know could affect you, although you are not able to predict how or how much they will affect you
+- Unknown-unknown
+  - items that are beyond your ability to forsee, predict, or prepare for
+
+**Risk management plan**
+- document that describes the approach to manage risks
+- methodology
+  - defines the tools, approaches, and data sources that may be used to peform risk management on the project
+- roles and responsibilities
+  - defines the lead, support, and risk management team membership for each type of action in the risk management plan
+- definitions of risk probability and impact  
+  - scales of risk probabilities and impact are defined using terms such as "very unlikely" to "almost certain"
+- probability and impact matrix
+- revised stakeholder tolerances
+- budgeting
+- timing
+- risk categories
+- reporting formats
+- tracking
+  - documents how risk activities will be recorded and audited
+
+**Risk breakdown structure (RBS)**
+- hierarchical arrangement of identified risks that helps project managers to organize potential sources of risk to the project
+
+**risk analysis**
+- evaluation of the probability and impact of the occurrence of a risk in a project
+
+**risk tolerance**
+- refers to the level of risk acceptable to a project manager or key stakeholder when the investment is compared to the potential payoff
+
+### 9B Project Risks and Triggers
+
+**Why**
+- identifying risks and triggers helps you determine the most effective action to take for each risk
+
+**Triggers**
+- early warning signs or indications that a risk to your project is about to occur
+
+**information-gathering techniques**
+- methods that are used to collect data that will assist the project team in identifying risks and risk triggers to the project
+- brainstorming
+  - used to identify overall project risks or may focus on the risks within a particular project segment or work package
+- delphi technique
+  - used to generate a consensus among project risk experts who anonymously submit their risk list to a facilitator
+  - relies on achieving consensus so its difficult to implement in many organizations
+- root cause analysis
+  - used to identify problems, discover the root cause, and develop corrective actions
+- interviewing
+  - used to get information from people with wide experience accross many projects
+  - direct
+    - skipped
+  - diagrammatic
+    - skipped
+
+**documentation reviews**
+- structured reviews of project plans and rlated documents that are conducted to improve the quality of documents
+
+**checklist analysis**
+- the process of systematically evaluating the pre-created checklists and developing a checklist based on relevant historical information
+
+**Assumptions**
+- statements that must be taken to be true in order to begin project planning
+
+**Assumption analysis**
+- process of validating the assumptions made during project planning
+
+**SWOT analysiss**
+- process of examining the proejct from the perspective of strengths, weaknesses, opportunities, and threats (SWOT)
+
+**Risk registers**
+- living document that identifies and categorizes risks, potential risk responses, and their triggers or warning signs
+
+**Risk categories**
+- tehcnical, quality, or performance risks
+- proejct management risks
+- organizational risks
+- external risks
+
+### 9C Qualitative Risk Analysis
+
+**Why**
+- Ranking the importance of risks is good way to prevent wasting time on risks that aren't high priority
+
+**Qualititative risk analysis**
+- process of determining the probability of occurrence and the impact of identified risks by using logical reasoning when numeric data is not readily available
+- determines prioritory of risks
+
+**Risk data quality assessment**
+- technique that involves the evaluation of the reliability of the available data concerning a risk
+
+**Risk probability and impact assessment**
+- risk assessment technique that is used to evaluate the likelihood of occurrence and potential impact of the identified project risks
+
+**probability and impact risk rating matrix**
+- graph showing the assignment of risk rating to risks or conditions
+
+_skipped some terms_
+
+### 9D Quantitative Risk Analysis
+
+**Why**
+- Allows you to maximize the positive consequences of the opportunities facing your project
+
+**Quantitative risk analysis**
+- technique that is used to assess risk exposure events to overall project objectives and determine the confidence levels of achieving the project objectives
+
+**Project risk ranking**
+- overall risk ranking for producing the final deliverable of the project or service of the project
+
+**Quantitative analysis methods**
+- allows managers to determine the probability and impact of each risk
+- sensitivity analysis
+  - method of assessing the relative effect of changing a varaible in the project to gain an insight into possible outcomes of one or more pitential courses of actions
+- decision tree analysis
+  - assessment of data obtained using the decision tree method to evailate various possible outcomes
+  - allow decision makers to evailuate both the probability and impact for each branch of every diecision under consideration
+- simulation
+  - technique that uses computer models and estimates of risk to translate uncertaintities at a detailed level into their potential impact on project objectives
+- Expected Monetary Value (EMV) analysis
+  - method of calculating the average outcome when the future is uncertain
+
+**Monte Carlo Analysis**
+- simulation technique used by project managers to make predictions about the statistical distribution of activity durations or cost estimates for a proejct
+  
+### 9E Risk response plan
+
+**Why**
+- provides insurance ofr your project because you take setps to ensure that each possible scenario has an action plan
+
+**Negative risk strategies**
+- specify how to deal with risk scenarios that have a possible negative impact on the project
+- risk avoidance
+- risk transference
+- risk mitigation
+- risk acceptance
+
+**Positive risk strategies**
+- address how to deal with risk scenarios that have a possible positive impact on the project
+- risk exploitation
+- risk sharing
+- risk enhancement
+- risk acceptance
+
+**Contingent response strategy**
+- risk response strategy developed in advance before things go wrong
+- meant to be used if and when identified risks become reality
+- AKA contingency plan
+
+**risk-related contract decisions**
+- risk respnse appraches agreed upon by both parties when procuring materials from 3rd party
+
